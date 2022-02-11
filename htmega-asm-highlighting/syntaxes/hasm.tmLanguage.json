@@ -1,0 +1,41 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "hasm",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#numeric"
+		},
+		{
+			"include": "#comments"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control",
+				"match": "(?i)\\b(nop|end|mov|ld|ldi|ild|st|ist|isti|push|pushi|pop|lpm|ilpm|stm|istm|istmi|jfzs|jfcs|jfns|jfvs|jfts|jfis|jfrs|jfcc|jfnc|jfvc|jftc|jfic|jfrc|rjfcs|rjfns|rjfvs|rjfts|rjfis|rjfrs|rjfcc|rjfnc|rjfvc|rjftc|rjfic|rjfrc|add|addc|sub|subc|mul|div|muls|divs|and|or|xor|cp|cpc|addi|addci|subi|subci|muli|divi|mulsi|divsi|andi|ori|xori|cpi|cpci|is|com|neg|inc|dec|swap|lsl|lsr|rol|ror|asr|tst)\\b"
+			}]
+		},
+		"numeric": {
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\b(([0-9]+)|(0(x|X)[0-9a-fA-F]*)|(0(b|B)[01]*))\\b"
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"begin": "//",
+					"end": "\n",
+					"name": "comment"
+				}
+			]
+		}
+	},
+	"scopeName": "source.hasm"
+}

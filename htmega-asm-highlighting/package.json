@@ -1,0 +1,26 @@
+{
+    "name": "htmega-asm-highlighting",
+    "displayName": "HTMega Assembly Highlighting",
+    "description": "A syntax highlighter for the assembly for the custom microcontroller HTMega",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.64.0"
+    },
+    "repository": "https://github.com/YMandarin/HTMega",
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "hasm",
+            "aliases": ["hasm", "hasm"],
+            "extensions": [".asm",".hasm"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "hasm",
+            "scopeName": "source.hasm",
+            "path": "./syntaxes/hasm.tmLanguage.json"
+        }]
+    }
+}
