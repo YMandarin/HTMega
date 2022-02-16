@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="Program_BRAM_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1644695391">
+  <File Type="PA-TCL" Name="Program_BRAM.tcl"/>
+  <File Type="REPORTS-TCL" Name="Program_BRAM_reports.tcl"/>
+  <File Type="RDS-RDS" Name="Program_BRAM.vds"/>
+  <File Type="RDS-UTIL" Name="Program_BRAM_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="Program_BRAM_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="Program_BRAM.dcp"/>
+  <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Program_BRAM">
+    <File Path="$PSRCDIR/sources_1/ip/Program_BRAM/Program_BRAM.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="Program_BRAM"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/Program_BRAM">
+    <File Path="$PSRCDIR/sources_1/ip/Program_BRAM/Program_BRAM.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopModule" Val="Program_BRAM"/>
+      <Option Name="UseBlackboxStub" Val="1"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+</GenRun>

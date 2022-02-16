@@ -4,7 +4,7 @@
     "description": "A syntax highlighter for the assembly for the custom microcontroller HTMega",
     "version": "1.0.0",
     "engines": {
-        "vscode": "^1.64.0"
+        "vscode": "^1.60.0"
     },
     "repository": "https://github.com/YMandarin/HTMega",
     "categories": [

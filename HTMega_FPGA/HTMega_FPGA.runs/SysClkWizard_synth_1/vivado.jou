@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sat Feb 12 20:42:33 2022
+# Process ID: 31636
+# Current directory: E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/SysClkWizard_synth_1
+# Command line: vivado.exe -log SysClkWizard.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SysClkWizard.tcl
+# Log file: E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/SysClkWizard_synth_1/SysClkWizard.vds
+# Journal file: E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/SysClkWizard_synth_1\vivado.jou
+# Running On: YMLap, OS: Windows, CPU Frequency: 2712 MHz, CPU Physical cores: 4, Host memory: 51428 MB
+#-----------------------------------------------------------
+source SysClkWizard.tcl -notrace

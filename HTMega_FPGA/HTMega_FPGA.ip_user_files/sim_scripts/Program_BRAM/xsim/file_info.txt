@@ -1,0 +1,2 @@
+Program_BRAM.v,verilog,xil_defaultlib,../../../../HTMega_FPGA.gen/sources_1/ip/Program_BRAM/sim/Program_BRAM.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

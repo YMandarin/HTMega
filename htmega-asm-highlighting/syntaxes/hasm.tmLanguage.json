@@ -22,8 +22,8 @@
 		"numeric": {
 			"patterns": [
 				{
-					"name": "constant.numeric",
-					"match": "\\b(([0-9]+)|(0(x|X)[0-9a-fA-F]*)|(0(b|B)[01]*))\\b"
+					"name": "constant",
+					"match": "(?i)\\b(([0-9]+)|(0x[0-9a-f]*)|(0b[01]*|pa_in|pb_in|pc_in|pd_in|pa_out|pb_out|pc_out|pd_out|pa_conf|pb_conf|pc_conf|pd_conf|uart_conf|uart_td|uart_rd|tima_val|timb_val|tima_top|timb_top|tima_comp|timb_comp|tima_conf|timb_conf|micr_l|micr_h|alu_b|sp|iaddr|pc|flags))\\b"
 				}
 			]
 		},

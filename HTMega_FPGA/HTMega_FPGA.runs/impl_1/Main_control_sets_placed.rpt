@@ -1,0 +1,113 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+| Date         : Mon Feb 14 20:54:09 2022
+| Host         : YMLap running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Main_control_sets_placed.rpt
+| Design       : Main
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    35 |
+|    Minimum number of control sets                        |    35 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    99 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    35 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     7 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     7 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    17 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              98 |           43 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               8 |            4 |
+| Yes          | No                    | No                     |             386 |          149 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              33 |           11 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+--------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
+|    Clock Signal    |                   Enable Signal                  |                Set/Reset Signal                | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------+--------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
+|  Clock/inst/CLK_48 |                                                  |                                                |                1 |              1 |         1.00 |
+| ~Clock/inst/CLK_24 |                                                  |                                                |                1 |              1 |         1.00 |
+|  clk               | BootLoaderI/Receiver/receiving_reg_n_0           |                                                |                2 |              4 |         2.00 |
+|  clk               | BootLoaderI/Transmitter/FIFO[3]_i_2_n_0          | BootLoaderI/Transmitter/FIFO[3]_i_1_n_0        |                1 |              4 |         4.00 |
+|  clk               | BootLoaderI/Transmitter/counter0                 |                                                |                1 |              4 |         4.00 |
+|  Clock/inst/CLK_12 |                                                  | Boot_Controller/running_reg_0                  |                3 |              4 |         1.33 |
+|  Clock/inst/CLK_12 |                                                  | GP_Bus/Timer/Timer_Micros/prescaler[3]_i_1_n_0 |                1 |              4 |         4.00 |
+| ~Clock/inst/CLK_24 | clk                                              | GP_Bus/Bus_Controller/Slave_Addr_out_reg[1]_3  |                3 |              4 |         1.33 |
+|  Clock/inst/CLK_12 | Boot_Controller/E[0]                             |                                                |                3 |              5 |         1.67 |
+| ~Clock/inst/CLK_48 |                                                  |                                                |                7 |              7 |         1.00 |
+| ~Clock/inst/CLK_48 | RAM/Controller/E[0]                              |                                                |                4 |              8 |         2.00 |
+|  clk               | BootLoaderI/Receiver/FIFO[7]_i_1_n_0             |                                                |                1 |              8 |         8.00 |
+|  clk               | BootLoaderI/Receiver/finished1_out               | BootLoaderI/Receiver/finished_receiving        |                2 |              8 |         4.00 |
+| ~Clock/inst/CLK_48 | RAM/Controller/data_out_buffer[15]_i_1_n_0       |                                                |                5 |              8 |         1.60 |
+|  Clock/inst/CLK_12 | BootLoaderI/Receiver/is_second_reg[0]            |                                                |                4 |              8 |         2.00 |
+|  Clock/inst/CLK_12 | BootLoaderI/Receiver/is_second_reg[1]            |                                                |                2 |              8 |         4.00 |
+|  clk               |                                                  |                                                |                4 |              9 |         2.25 |
+| ~Clock/inst/CLK_24 | Loader/Bus_Loader_inst/Bus_enable_reg_0[0]       |                                                |                6 |             13 |         2.17 |
+| ~Clock/inst/CLK_12 | Decoder/SP_dec_reg_0                             |                                                |                4 |             16 |         4.00 |
+| ~Clock/inst/CLK_12 | GP_Bus/Bus_Controller/Slave_Addr_out_reg[2]_0    |                                                |                8 |             16 |         2.00 |
+| ~Clock/inst/CLK_12 | GP_Bus/Bus_Controller/E[0]                       |                                                |               12 |             16 |         1.33 |
+| ~Clock/inst/CLK_12 | GP_Bus/Bus_Controller/Slave_Addr_out_reg[0]_0[0] |                                                |                7 |             16 |         2.29 |
+| ~Clock/inst/CLK_12 | GP_Bus/Bus_Controller/Slave_Addr_out_reg[1]_0[0] |                                                |                6 |             16 |         2.67 |
+| ~Clock/inst/CLK_24 | clk                                              |                                                |                7 |             16 |         2.29 |
+|  Clock/inst/CLK_12 | Decoder/Start_execution_reg_0[0]                 |                                                |                7 |             16 |         2.29 |
+|  Clock/inst/CLK_12 | BootLoaderI/Receiver/is_second_reg[0]            | BootLoaderI/Receiver/wrong_parity_reg_4        |                5 |             17 |         3.40 |
+|  Clock/inst/CLK_48 | RAM/Controller/p_0_in                            |                                                |                4 |             17 |         4.25 |
+|  Clock/inst/CLK_12 | Decoder/Bus_load_reg_0[0]                        |                                                |                7 |             17 |         2.43 |
+| ~Clock/inst/CLK_12 | Boot_Controller/button_hold_reg_n_0              |                                                |                7 |             25 |         3.57 |
+|  Clock/inst/CLK_12 | Decoder/E[0]                                     |                                                |               15 |             32 |         2.13 |
+|  Clock/inst/CLK_12 | GP_Bus/Timer/Timer_Micros/prescaler[3]_i_1_n_0   |                                                |                8 |             32 |         4.00 |
+|  Clock/inst/CLK_12 | Boot_Controller/execute1                         |                                                |               12 |             33 |         2.75 |
+|  Clock/inst/CLK_12 |                                                  |                                                |               17 |             38 |         2.24 |
+| ~Clock/inst/CLK_12 |                                                  |                                                |               13 |             42 |         3.23 |
+| ~Clock/inst/CLK_24 | Clock/inst/CLK_12                                |                                                |               17 |             52 |         3.06 |
++--------------------+--------------------------------------------------+------------------------------------------------+------------------+----------------+--------------+
+
+
