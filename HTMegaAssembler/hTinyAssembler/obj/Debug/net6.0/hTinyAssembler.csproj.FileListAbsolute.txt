@@ -1,0 +1,15 @@
+E:\VSProjects\HTMegaAssembler\hTinyAssembler\bin\Debug\net6.0\hTinyAssembler.exe
+E:\VSProjects\HTMegaAssembler\hTinyAssembler\bin\Debug\net6.0\hTinyAssembler.deps.json
+E:\VSProjects\HTMegaAssembler\hTinyAssembler\bin\Debug\net6.0\hTinyAssembler.runtimeconfig.json
+E:\VSProjects\HTMegaAssembler\hTinyAssembler\bin\Debug\net6.0\hTinyAssembler.dll
+E:\VSProjects\HTMegaAssembler\hTinyAssembler\bin\Debug\net6.0\ref\hTinyAssembler.dll
+E:\VSProjects\HTMegaAssembler\hTinyAssembler\bin\Debug\net6.0\hTinyAssembler.pdb
+E:\VSProjects\HTMegaAssembler\hTinyAssembler\obj\Debug\net6.0\hTinyAssembler.csproj.AssemblyReference.cache
+E:\VSProjects\HTMegaAssembler\hTinyAssembler\obj\Debug\net6.0\hTinyAssembler.GeneratedMSBuildEditorConfig.editorconfig
+E:\VSProjects\HTMegaAssembler\hTinyAssembler\obj\Debug\net6.0\hTinyAssembler.AssemblyInfoInputs.cache
+E:\VSProjects\HTMegaAssembler\hTinyAssembler\obj\Debug\net6.0\hTinyAssembler.AssemblyInfo.cs
+E:\VSProjects\HTMegaAssembler\hTinyAssembler\obj\Debug\net6.0\hTinyAssembler.csproj.CoreCompileInputs.cache
+E:\VSProjects\HTMegaAssembler\hTinyAssembler\obj\Debug\net6.0\hTinyAssembler.dll
+E:\VSProjects\HTMegaAssembler\hTinyAssembler\obj\Debug\net6.0\ref\hTinyAssembler.dll
+E:\VSProjects\HTMegaAssembler\hTinyAssembler\obj\Debug\net6.0\hTinyAssembler.pdb
+E:\VSProjects\HTMegaAssembler\hTinyAssembler\obj\Debug\net6.0\hTinyAssembler.genruntimeconfig.cache
