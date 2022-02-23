@@ -1,15 +1,10 @@
-----------------------------------------------------------------------------------
-
-----------------------------------------------------------------------------------
-
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 
 entity GP_Bus_Master is
 	Port (
-		clk_12, clk_24, clk_96 : in std_logic;
+		clk_6, clk_12, clk_24 : in std_logic;
 		Master_Read_Addr_in, Master_Write_Addr_in : in std_logic_vector(7 downto 0);
 		Master_Data_in : in std_logic_vector(15 downto 0);
 		Master_Data_out : out std_logic_vector(15 downto 0);
@@ -33,7 +28,7 @@ end GP_Bus_Master;
 
 architecture Behavioral of GP_Bus_Master is
 component GP_Bus is
-    Port ( clk_12, clk_24 : in STD_LOGIC;
+    Port ( clk_6, clk_12 : in STD_LOGIC;
     	   Master_Addr_in : in STD_LOGIC_VECTOR (7 downto 0);
            Master_Data_in : in STD_LOGIC_VECTOR (15 downto 0);
            Master_Data_out : out STD_LOGIC_VECTOR (15 downto 0) := X"0000";
@@ -51,17 +46,18 @@ component GP_Bus is
 end component;
 
 component GP_RegisterBank is
-    Port ( clk_12, clk_96 : in STD_LOGIC;
-           bus_addr : in STD_LOGIC_VECTOR (7 downto 0);
-           bus_data_in : in STD_LOGIC_VECTOR (15 downto 0);
-           enable, write_enable : in STD_LOGIC;
-           bus_data_out : out STD_LOGIC_VECTOR (15 downto 0));
-           
+    Port ( 
+        clk_6, clk_24: in STD_LOGIC;
+        bus_addr : in STD_LOGIC_VECTOR (7 downto 0);
+        bus_data_in : in STD_LOGIC_VECTOR (15 downto 0);
+        enable, write_enable : in STD_LOGIC;
+        bus_data_out : out STD_LOGIC_VECTOR (15 downto 0)
+    );
 end component;
 
 component GPIO_Interface is
     Port ( 
-    	clk_12 : in STD_LOGIC;
+    	clk_6 : in STD_LOGIC;
 		bus_addr : in STD_LOGIC_VECTOR (7 downto 0);
 		bus_data_in : in STD_LOGIC_VECTOR (15 downto 0);
 		bus_data_out : out STD_LOGIC_VECTOR (15 downto 0);
@@ -75,7 +71,7 @@ component GPIO_Interface is
 end component;
 
 component UART_Interface is
-    Port ( clk_12 : in STD_LOGIC;
+    Port ( clk_6 : in STD_LOGIC;
     	   bus_addr_in : in STD_LOGIC_VECTOR (7 downto 0);
            bus_data_in : in STD_LOGIC_VECTOR (15 downto 0);
            bus_data_out : out STD_LOGIC_VECTOR(15 downto 0) := X"0000";
@@ -86,7 +82,7 @@ component UART_Interface is
 end component;
 
 component Timers is
-    Port ( clk_12 : in STD_LOGIC;
+    Port ( clk_6 : in STD_LOGIC;
     	   bus_addr_in : in STD_LOGIC_VECTOR (7 downto 0);
            bus_data_in : in STD_LOGIC_VECTOR (15 downto 0);
            bus_data_out : out STD_LOGIC_VECTOR(15 downto 0) := X"0000";
@@ -97,7 +93,7 @@ end component;
 
 component Special_Registers is
     Port ( 
-    	clk_12, clk_24 : in STD_LOGIC;
+    	clk_6 : in STD_LOGIC;
     	Bus_Addr_in : in STD_LOGIC_VECTOR (7 downto 0);
 		Bus_Data_in : in STD_LOGIC_VECTOR (15 downto 0);
 		Bus_Data_out : out STD_LOGIC_VECTOR (15 downto 0);
@@ -124,7 +120,7 @@ begin
 		else Master_Read_Addr_in;
 	
 	
-Bus_Controller : GP_Bus port map(clk_12,clk_24,
+Bus_Controller : GP_Bus port map(clk_6, clk_12,
 	master_addr, Master_Data_in, Master_Data_out,
 	bus_enable, Master_Bus_write,
 	Slave_data, Slave_addr, Slave_write_enable,
@@ -132,13 +128,13 @@ Bus_Controller : GP_Bus port map(clk_12,clk_24,
 	GPREG_data, IO_data, UART_data, Timer_data, SREG_data
 	);
 
-GPREG : GP_RegisterBank port map(clk_12, clk_96,
+GPREG : GP_RegisterBank port map(clk_6, clk_24,
 	bus_addr => Slave_addr, bus_data_in => Slave_data,
 	enable => GPREG_SS, write_enable => Slave_write_enable,
 	bus_data_out => GPREG_data
 	);
 
-GPIO : GPIO_Interface port map(clk_12,
+GPIO : GPIO_Interface port map(clk_6,
 	bus_addr => Slave_addr, bus_data_in => Slave_data,
 	bus_data_out => IO_data, bus_enable => IO_SS, write_enable => Slave_write_enable,
 	port_Timer_A => Timer_port_A, port_Timer_B => Timer_port_B,
@@ -146,21 +142,21 @@ GPIO : GPIO_Interface port map(clk_12,
 	Pin_PMOD => Pin_PMOD
 	);
 
-UART : UART_Interface port map(clk_12,
+UART : UART_Interface port map(clk_6,
 	bus_addr_in => Slave_addr, bus_data_in => Slave_data,
 	bus_data_out => UART_data, bus_enable => UART_SS, 
 	bus_write_enable => Slave_write_enable, UART_port_out => Pin_UART_out,
 	UART_port_in => Pin_UART_in
 	);
 
-Timer : Timers port map(clk_12,
+Timer : Timers port map(clk_6,
 	bus_addr_in => Slave_addr, bus_data_in => Slave_data,
 	bus_data_out => Timer_data, bus_enable => Timer_SS, 
 	bus_write_enable => Slave_write_enable, 
 	port_timer_A => Timer_port_A, port_timer_B => Timer_port_B
 	);
 	
-SREG : Special_Registers port map(clk_12, clk_24 => clk_24,
+SREG : Special_Registers port map(clk_6,
 	Bus_Addr_in => Slave_addr, Bus_Data_in => Slave_data,
 	Bus_Data_out => SREG_data, Bus_enable => SREG_SS,
 	Bus_Write_enable => Slave_write_enable, SP_dec => SP_dec, 

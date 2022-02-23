@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
--- Date        : Sat Feb 12 20:51:58 2022
+-- Date        : Sun Feb 20 10:01:47 2022
 -- Host        : YMLap running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               e:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.gen/sources_1/ip/Program_BRAM/Program_BRAM_stub.vhdl

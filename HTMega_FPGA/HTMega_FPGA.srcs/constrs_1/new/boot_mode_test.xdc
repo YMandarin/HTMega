@@ -9,7 +9,5 @@ set_property -dict {PACKAGE_PIN M3 IOSTANDARD LVCMOS33} [get_ports BootLoader_fi
 set_property -dict {PACKAGE_PIN L3 IOSTANDARD LVCMOS33} [get_ports Program_stopped]
 
 
-set_property BITSTREAM.GENERAL.COMPRESS TRUE [current_design]
-set_property BITSTREAM.CONFIG.CONFIGRATE 33 [current_design]
 
-set_property CONFIG_MODE SPIx4 [current_design]
+

@@ -9,7 +9,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Memory_Loader is
 	Port (
-		clk_12 : in STD_LOGIC;
+		clk_6 : in STD_LOGIC;
 		Start_execution : in STD_LOGIC;
 		Bus_load, Bus_load_second, RAM_load, PM_load, Use_Imdt : in STD_LOGIC;
 		Finished : out STD_LOGIC := '0';
@@ -33,7 +33,7 @@ end Memory_Loader;
 
 architecture Behavioral of Memory_Loader is
 component Bus_Loader is
-    Port ( clk_12 : in STD_LOGIC;
+    Port ( clk_6 : in STD_LOGIC;
            Enable : in STD_LOGIC;
            Start : in STD_LOGIC;
            LoadSecond : in STD_LOGIC;
@@ -48,7 +48,7 @@ component Bus_Loader is
 end component;
 component RAM_Loader is
 	Port (
-		clk_12, enable, start : in STD_LOGIC;
+		clk_6, enable, start : in STD_LOGIC;
 		Address : in STD_LOGIC_VECTOR (15 downto 0);
 		Data_out : out STD_LOGIC_VECTOR (15 downto 0);
 		finished : out STD_LOGIC := '0';
@@ -90,7 +90,7 @@ begin
 		
 		
 	Bus_Loader_inst : Bus_Loader port map(
-		clk_12 => clk_12, Enable => Bus_load,
+		clk_6 => clk_6, Enable => Bus_load,
 		Start => bus_loader_start, LoadSecond => Bus_load_second,
 		Addr1 => Address_bus_1, Addr2 => Address_bus_2,
 		Finished => bus_loader_fin,
@@ -102,7 +102,7 @@ begin
 	);
 	
 	RAM_loader_inst : RAM_Loader port map(
-		clk_12 => clk_12, enable => RAM_load, start => ram_loader_start,
+		clk_6 => clk_6, enable => RAM_load, start => ram_loader_start,
 		Address => Address_ram,
 		Data_out => ram_loader_data, finished => ram_loader_fin,
 		
@@ -112,7 +112,7 @@ begin
 	);
 	
 	PM_loader_inst : RAM_Loader port map(
-		clk_12 => clk_12, enable => PM_load, start => pm_loader_start,
+		clk_6 => clk_6, enable => PM_load, start => pm_loader_start,
 		Address => Address_ram,
 		Data_out => pm_loader_data, finished => pm_loader_fin,
 		

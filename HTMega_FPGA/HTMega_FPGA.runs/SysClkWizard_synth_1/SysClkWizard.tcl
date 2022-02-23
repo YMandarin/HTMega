@@ -70,12 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "SysClkWizard_synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -87,7 +81,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/wt [current_project]
 set_property parent.project_path E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.xpr [current_project]
-set_property XPM_LIBRARIES XPM_CDC [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:cmod_a7-35t:part0:1.1 [current_project]
@@ -95,7 +89,7 @@ set_property ip_output_repo e:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet e:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/SysClkWizard/SysClkWizard.xci
+read_ip -quiet E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/SysClkWizard/SysClkWizard.xci
 set_property used_in_implementation false [get_files -all e:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.gen/sources_1/ip/SysClkWizard/SysClkWizard_board.xdc]
 set_property used_in_implementation false [get_files -all e:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.gen/sources_1/ip/SysClkWizard/SysClkWizard.xdc]
 set_property used_in_implementation false [get_files -all e:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.gen/sources_1/ip/SysClkWizard/SysClkWizard_ooc.xdc]

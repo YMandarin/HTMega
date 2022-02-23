@@ -1,0 +1,464 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Feb 17 10:51:04 2022
+# Process ID: 2248
+# Current directory: E:/Diplomarbeit/HTMega/HTMega_FPGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9372 E:\Diplomarbeit\HTMega\HTMega_FPGA\HTMega_FPGA.xpr
+# Log file: E:/Diplomarbeit/HTMega/HTMega_FPGA/vivado.log
+# Journal file: E:/Diplomarbeit/HTMega/HTMega_FPGA\vivado.jou
+# Running On: YMLap, OS: Windows, CPU Frequency: 2712 MHz, CPU Physical cores: 4, Host memory: 51428 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26c:part0:1.3 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26c/1.3/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.2/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:k26i:part0:1.3 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/k26i/1.3/board.xml as part xck26-sfvc784-2lvi-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.4 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.4/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu116:part0:1.5 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu116/1.5/board.xml as part xcku5p-ffvb676-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kv260_som:part0:1.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kv260_som/1.2/board.xml as part xck26-sfvc784-2lv-c specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.3 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.3/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu128:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu128/production/1.0/board.xml as part xcvu37p-fsvh2892-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.3 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.3/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc702:part0:1.4 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc702/1.4/board.xml as part xc7z020clg484-1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu104:part0:1.1 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu104/1.1/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.4 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.4/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.5 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.5/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu106:part0:2.6 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu106/2.6/board.xml as part xczu7ev-ffvc1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.0/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.1 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.1/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.2/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld_es:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/es/1.0/board.xml as part xczu58dr-fsvg1517-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.0/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.1 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.1/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.2 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.2/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:1.0 available at E:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/1.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Xilinx/Vivado/2021.2/data/ip'.
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:09 . Memory (MB): peak = 1612.215 ; gain = 0.000
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.CLKOUT5_USED {true} CONFIG.CLK_OUT5_PORT {CLK_6} CONFIG.CLKOUT5_REQUESTED_OUT_FREQ {6} CONFIG.MMCM_CLKOUT4_DIVIDE {128} CONFIG.NUM_OUT_CLKS {5} CONFIG.CLKOUT5_JITTER {751.587} CONFIG.CLKOUT5_PHASE_ERROR {693.818}] [get_ips SysClkWizard]
+generate_target all [get_files  E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/SysClkWizard/SysClkWizard.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'SysClkWizard'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'SysClkWizard'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'SysClkWizard'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'SysClkWizard'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'SysClkWizard'...
+catch { config_ip_cache -export [get_ips -all SysClkWizard] }
+export_ip_user_files -of_objects [get_files E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/SysClkWizard/SysClkWizard.xci] -no_script -sync -force -quiet
+reset_run SysClkWizard_synth_1
+launch_runs SysClkWizard_synth_1 -jobs 4
+[Thu Feb 17 10:53:46 2022] Launched SysClkWizard_synth_1...
+Run output will be captured here: E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/SysClkWizard_synth_1/runme.log
+export_simulation -of_objects [get_files E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/SysClkWizard/SysClkWizard.xci] -directory E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.ip_user_files/sim_scripts -ip_user_files_dir E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.ip_user_files -ipstatic_source_dir E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/compile_simlib/modelsim} {questa=E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/compile_simlib/questa} {riviera=E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/compile_simlib/riviera} {activehdl=E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property top RAM_Controller [current_fileset]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'Main'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'Main' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+"xvlog --incr --relax -prj Main_vlog.prj"
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+update_compile_order -fileset sources_1
+set_property is_enabled false [get_files  E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd]
+set_property top RAM_Controller [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'RAM_Controller'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'RAM_Controller' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj RAM_Controller_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'RAM_Controller'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot RAM_Controller_behav xil_defaultlib.RAM_Controller -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot RAM_Controller_behav xil_defaultlib.RAM_Controller -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.ram_controller
+Built simulation snapshot RAM_Controller_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2384.125 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "RAM_Controller_behav -key {Behavioral:sim_1:Functional:RAM_Controller} -tclbatch {RAM_Controller.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source RAM_Controller.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'RAM_Controller_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2433.387 ; gain = 49.262
+add_force {/RAM_Controller/clk_6} -radix hex {1 0ns} {0 83333ps} -repeat_every 166666ps
+add_force {/RAM_Controller/clk_12} -radix hex {1 0ns} {0 41666ps} -repeat_every 83333ps
+add_force {/RAM_Controller/clk_24} -radix hex {1 0ns} {0 20833ps} -repeat_every 41666ps
+add_force {/RAM_Controller/write} -radix hex {0 0ns}
+add_force {/RAM_Controller/read} -radix hex {0 0ns}
+add_force {/RAM_Controller/Write_Address} -radix hex {0 0ns}
+add_force {/RAM_Controller/Read_Address} -radix hex {0 0ns}
+add_force {/RAM_Controller/Addr_space} -radix hex {0 0ns}
+add_force {/RAM_Controller/Data_in} -radix hex {0 0ns}
+run 41.6666 ns
+run 41.6666 ns
+run 41.6666 ns
+add_force {/RAM_Controller/Read_Address} -radix hex {ab 0ns}
+add_force {/RAM_Controller/Write_Address} -radix hex {cd 0ns}
+run 41.6666 ns
+run 41.6666 ns
+run 41.6666 ns
+run 41.6666 ns
+run 41.6666 ns
+add_force {/RAM_Controller/write} -radix hex {1 0ns}
+add_force {/RAM_Controller/Data_in} -radix hex {ffff 0ns}
+run 41.6666 ns
+run 41.6666 ns
+run 41.6666 ns
+run 41.6666 ns
+add_force {/RAM_Controller/write} -radix hex {0 0ns}
+add_force {/RAM_Controller/read} -radix hex {1 0ns}
+add_force {/RAM_Controller/Read_Address} -radix hex {cd 0ns}
+run 41.6666 ns
+run 20.8333325 ns
+add_force {/RAM_Controller/RAM_Data} -radix hex {ab 0ns}
+run 20.8333325 ns
+run 20.8333325 ns
+add_force {/RAM_Controller/RAM_Data} -radix hex {cd 0ns}
+run 20.8333325 ns
+run 20.8333325 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top PM_Controller [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+export_ip_user_files -of_objects  [get_files E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller_24MHz.vhd] -no_script -reset -force -quiet
+remove_files  E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller_24MHz.vhd
+file delete -force E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller_24MHz.vhd
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'PM_Controller'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'PM_Controller' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj PM_Controller_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.gen/sources_1/ip/Program_BRAM/sim/Program_BRAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Program_BRAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+"xvhdl --incr --relax -prj PM_Controller_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PM_Controller'
+WARNING: [VRFC 10-3093] actual for formal port 'clka' is neither a static name nor a globally static expression [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd:59]
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot PM_Controller_behav xil_defaultlib.PM_Controller xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot PM_Controller_behav xil_defaultlib.PM_Controller xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5(C_FAMILY="art...
+Compiling module xil_defaultlib.Program_BRAM
+Compiling architecture behavioral of entity xil_defaultlib.pm_controller
+Built simulation snapshot PM_Controller_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 2436.820 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "PM_Controller_behav -key {Behavioral:sim_1:Functional:PM_Controller} -tclbatch {PM_Controller.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source PM_Controller.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module PM_Controller.PM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'PM_Controller_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 2437.758 ; gain = 0.938
+add_force {/PM_Controller/clk_6} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+add_force {/PM_Controller/clk_12} -radix hex {1 0ns} {0 25000ps} -repeat_every 50000ps
+add_force {/PM_Controller/clk_24} -radix hex {1 0ns} {0 12500ps} -repeat_every 25000ps
+add_force {/PM_Controller/Write} -radix hex {0 0ns}
+add_force {/PM_Controller/Read} -radix hex {0 0ns}
+add_force {/PM_Controller/Boot_Write} -radix hex {0 0ns}
+add_force {/PM_Controller/Program_Read} -radix hex {0 0ns}
+add_force {/PM_Controller/Write_Addr} -radix hex {0 0ns}
+add_force {/PM_Controller/Read_Addr} -radix hex {0 0ns}
+add_force {/PM_Controller/Program_Counter} -radix hex {0 0ns}
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {0 0ns}
+add_force {/PM_Controller/Data_in} -radix hex {0 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {0 0ns}
+run 100 ns
+add_force {/PM_Controller/Addr_space} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+add_force {/PM_Controller/Boot_Write} -radix hex {1 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {1 0ns}
+run 100 ns
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {1 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {2 0ns}
+run 100 ns
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {2 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {3 0ns}
+run 100 ns
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {3 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {4 0ns}
+run 100 ns
+add_force {/PM_Controller/Boot_Write} -radix hex {0 0ns}
+add_force {/PM_Controller/Program_Read} -radix hex {1 0ns}
+add_force {/PM_Controller/Program_Counter} -radix hex {0 0ns}
+run 100 ns
+add_force {/PM_Controller/Program_Counter} -radix hex {1 0ns}
+run 100 ns
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'PM_Controller'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'E:/Xilinx/Vivado/2021.2/data/xsim/xsim.ini' copied to run dir:'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'PM_Controller' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj PM_Controller_vlog.prj"
+"xvhdl --incr --relax -prj PM_Controller_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'PM_Controller'
+WARNING: [VRFC 10-3093] actual for formal port 'clka' is neither a static name nor a globally static expression [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd:59]
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'PM_Controller'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot PM_Controller_behav xil_defaultlib.PM_Controller xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L blk_mem_gen_v8_4_5 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot PM_Controller_behav xil_defaultlib.PM_Controller xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_5.blk_mem_gen_v8_4_5(C_FAMILY="art...
+Compiling module xil_defaultlib.Program_BRAM
+Compiling architecture behavioral of entity xil_defaultlib.pm_controller
+Built simulation snapshot PM_Controller_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module PM_Controller.PM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:12 . Memory (MB): peak = 2441.750 ; gain = 1.516
+add_force {/PM_Controller/clk_6} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+add_force {/PM_Controller/clk_12} -radix hex {1 0ns} {0 25000ps} -repeat_every 50000ps
+add_force {/PM_Controller/clk_24} -radix hex {1 0ns} {0 12500ps} -repeat_every 25000ps
+add_force {/PM_Controller/Write} -radix hex {0 0ns}
+add_force {/PM_Controller/Read} -radix hex {0 0ns}
+add_force {/PM_Controller/Program_Read} -radix hex {0 0ns}
+add_force {/PM_Controller/Boot_Write} -radix hex {0 0ns}
+add_force {/PM_Controller/Addr_space} -radix hex {0 0ns}
+add_force {/PM_Controller/Write_Addr} -radix hex {0 0ns}
+add_force {/PM_Controller/Read_Addr} -radix hex {0 0ns}
+add_force {/PM_Controller/Program_Counter} -radix hex {0 0ns}
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {0 0ns}
+add_force {/PM_Controller/Data_in} -radix hex {0 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {0 0ns}
+save_wave_config {E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/PM_Controller_behav.wcfg}
+run 100 ns
+add_force {/PM_Controller/Boot_Write} -radix hex {1 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {10 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {1 0ns}
+run 100 ns
+add_force {/PM_Controller/Boot_Data_in} -radix hex {2 0ns}
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {1 0ns}
+run 100 ns
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {2 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {3 0ns}
+run 100 ns
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {2 0ns}
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {3 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {4 0ns}
+run 100 ns
+save_wave_config {E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/PM_Controller_behav.wcfg}
+add_force {/PM_Controller/Boot_Write} -radix hex {0 0ns}
+add_force {/PM_Controller/Program_Read} -radix hex {2 0ns}
+ERROR: [Simtcl 6-179] Couldn't add force for the following reason: Illegal value '2': Object size 1 does not match size of given value 2.
+add_force {/PM_Controller/Program_Read} -radix hex {1 0ns}
+run 100 ns
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.Register_PortA_Output_of_Memory_Primitives {true}] [get_ips Program_BRAM]
+generate_target all [get_files  E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/Program_BRAM/Program_BRAM.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'Program_BRAM'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'Program_BRAM'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'Program_BRAM'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'Program_BRAM'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'Program_BRAM'...
+catch { config_ip_cache -export [get_ips -all Program_BRAM] }
+export_ip_user_files -of_objects [get_files E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/Program_BRAM/Program_BRAM.xci] -no_script -sync -force -quiet
+reset_run Program_BRAM_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/Program_BRAM_synth_1
+
+launch_runs Program_BRAM_synth_1 -jobs 4
+[Sun Feb 20 09:32:09 2022] Launched Program_BRAM_synth_1...
+Run output will be captured here: E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/Program_BRAM_synth_1/runme.log
+export_simulation -of_objects [get_files E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/Program_BRAM/Program_BRAM.xci] -directory E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.ip_user_files/sim_scripts -ip_user_files_dir E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.ip_user_files -ipstatic_source_dir E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/compile_simlib/modelsim} {questa=E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/compile_simlib/questa} {riviera=E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/compile_simlib/riviera} {activehdl=E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'PM_Controller'
+boost::filesystem::remove: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird: "E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim/simulate.log"
+INFO: [Common 17-17] undo 'relaunch_sim'
+INFO: [Common 17-17] undo 'relaunch_sim'
+ERROR: [Common 17-69] Command failed: boost::filesystem::remove: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird: "E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'PM_Controller'
+boost::filesystem::remove: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird: "E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/xsim/simulate.log"
+reset_run Program_BRAM_synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/Program_BRAM_synth_1
+
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Feb 20 09:34:16 2022...

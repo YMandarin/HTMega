@@ -60,6 +60,7 @@
 // __CLK_24__24.00000______0.000______50.0______600.395____693.818
 // __CLK_48__48.00000______0.000______50.0______520.694____693.818
 // __CLK_96__96.00000______0.000______50.0______478.350____693.818
+// ___CLK_6___6.00000______0.000______50.0______751.587____693.818
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -76,6 +77,7 @@ module SysClkWizard_clk_wiz
   output        CLK_24,
   output        CLK_48,
   output        CLK_96,
+  output        CLK_6,
   // Status and control signals
   input         reset,
   output        locked,
@@ -103,7 +105,7 @@ wire clk_in2_SysClkWizard;
   wire        CLK_24_SysClkWizard;
   wire        CLK_48_SysClkWizard;
   wire        CLK_96_SysClkWizard;
-  wire        clk_out5_SysClkWizard;
+  wire        CLK_6_SysClkWizard;
   wire        clk_out6_SysClkWizard;
   wire        clk_out7_SysClkWizard;
 
@@ -118,7 +120,6 @@ wire clk_in2_SysClkWizard;
    wire clkout1b_unused;
    wire clkout2b_unused;
    wire clkout3b_unused;
-   wire clkout4_unused;
   wire        clkout5_unused;
   wire        clkout6_unused;
   wire        clkfbstopped_unused;
@@ -150,6 +151,10 @@ wire clk_in2_SysClkWizard;
     .CLKOUT3_PHASE        (0.000),
     .CLKOUT3_DUTY_CYCLE   (0.500),
     .CLKOUT3_USE_FINE_PS  ("FALSE"),
+    .CLKOUT4_DIVIDE       (128),
+    .CLKOUT4_PHASE        (0.000),
+    .CLKOUT4_DUTY_CYCLE   (0.500),
+    .CLKOUT4_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (83.333))
   mmcm_adv_inst
     // Output clocks
@@ -164,7 +169,7 @@ wire clk_in2_SysClkWizard;
     .CLKOUT2B            (clkout2b_unused),
     .CLKOUT3             (CLK_96_SysClkWizard),
     .CLKOUT3B            (clkout3b_unused),
-    .CLKOUT4             (clkout4_unused),
+    .CLKOUT4             (CLK_6_SysClkWizard),
     .CLKOUT5             (clkout5_unused),
     .CLKOUT6             (clkout6_unused),
      // Input clock control
@@ -225,6 +230,10 @@ wire clk_in2_SysClkWizard;
   BUFG clkout4_buf
    (.O   (CLK_96),
     .I   (CLK_96_SysClkWizard));
+
+  BUFG clkout5_buf
+   (.O   (CLK_6),
+    .I   (CLK_6_SysClkWizard));
 
 
 

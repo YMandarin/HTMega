@@ -9,7 +9,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Memory_Writer is
     Port ( 
-    	clk_12 : in STD_LOGIC;
+    	clk_6 : in STD_LOGIC;
     	Start_execution : in STD_LOGIC;
     	Finished : out STD_LOGIC := '0';
     	Data_in : in STD_LOGIC_VECTOR(15 downto 0);
@@ -56,11 +56,19 @@ PM_enable <= start_buffer and PM_write_buffer;
 
 Finished <= fin when enabled = '1' else Start_execution;
 
-process(clk_12) begin
-	if rising_edge(clk_12) then
+process(clk_6) begin
+	if rising_edge(clk_6) then
 		start_buffer <= enabled and Start_execution;
+		Data_buffer <= Data_in;
+		Bus_write_buffer <= Bus_write;
+		RAM_write_buffer <= RAM_write;
+		PM_write_buffer  <= PM_write;
+		Bus_addr_bufffer <= Bus_Addr_in;
+		RAM_addr_buffer <= RAM_Addr_in;
+		PM_addr_buffer <= PM_Addr_in;
+		Data_buffer <= Data_in;
 	end if;
-	if falling_edge(clk_12) then
+	if falling_edge(clk_6) then
 		fin <= start_buffer;
 	end if;
 end process;

@@ -1,0 +1,167 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Feb 17 10:51:04 2022
+# Process ID: 2248
+# Current directory: E:/Diplomarbeit/HTMega/HTMega_FPGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9372 E:\Diplomarbeit\HTMega\HTMega_FPGA\HTMega_FPGA.xpr
+# Log file: E:/Diplomarbeit/HTMega/HTMega_FPGA/vivado.log
+# Journal file: E:/Diplomarbeit/HTMega/HTMega_FPGA\vivado.jou
+# Running On: YMLap, OS: Windows, CPU Frequency: 2712 MHz, CPU Physical cores: 4, Host memory: 51428 MB
+#-----------------------------------------------------------
+start_gui
+open_project E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.xpr
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.CLKOUT5_USED {true} CONFIG.CLK_OUT5_PORT {CLK_6} CONFIG.CLKOUT5_REQUESTED_OUT_FREQ {6} CONFIG.MMCM_CLKOUT4_DIVIDE {128} CONFIG.NUM_OUT_CLKS {5} CONFIG.CLKOUT5_JITTER {751.587} CONFIG.CLKOUT5_PHASE_ERROR {693.818}] [get_ips SysClkWizard]
+generate_target all [get_files  E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/SysClkWizard/SysClkWizard.xci]
+catch { config_ip_cache -export [get_ips -all SysClkWizard] }
+export_ip_user_files -of_objects [get_files E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/SysClkWizard/SysClkWizard.xci] -no_script -sync -force -quiet
+reset_run SysClkWizard_synth_1
+launch_runs SysClkWizard_synth_1 -jobs 4
+wait_on_run SysClkWizard_synth_1
+export_simulation -of_objects [get_files E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/SysClkWizard/SysClkWizard.xci] -directory E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.ip_user_files/sim_scripts -ip_user_files_dir E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.ip_user_files -ipstatic_source_dir E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/compile_simlib/modelsim} {questa=E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/compile_simlib/questa} {riviera=E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/compile_simlib/riviera} {activehdl=E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top RAM_Controller [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+update_compile_order -fileset sources_1
+set_property is_enabled false [get_files  E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd]
+set_property top RAM_Controller [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+source RAM_Controller.tcl
+add_force {/RAM_Controller/clk_6} -radix hex {1 0ns} {0 83333ps} -repeat_every 166666ps
+add_force {/RAM_Controller/clk_12} -radix hex {1 0ns} {0 41666ps} -repeat_every 83333ps
+add_force {/RAM_Controller/clk_24} -radix hex {1 0ns} {0 20833ps} -repeat_every 41666ps
+add_force {/RAM_Controller/write} -radix hex {0 0ns}
+add_force {/RAM_Controller/read} -radix hex {0 0ns}
+add_force {/RAM_Controller/Write_Address} -radix hex {0 0ns}
+add_force {/RAM_Controller/Read_Address} -radix hex {0 0ns}
+add_force {/RAM_Controller/Addr_space} -radix hex {0 0ns}
+add_force {/RAM_Controller/Data_in} -radix hex {0 0ns}
+run 41.6666 ns
+run 41.6666 ns
+run 41.6666 ns
+add_force {/RAM_Controller/Read_Address} -radix hex {ab 0ns}
+add_force {/RAM_Controller/Write_Address} -radix hex {cd 0ns}
+run 41.6666 ns
+run 41.6666 ns
+run 41.6666 ns
+run 41.6666 ns
+run 41.6666 ns
+add_force {/RAM_Controller/write} -radix hex {1 0ns}
+add_force {/RAM_Controller/Data_in} -radix hex {ffff 0ns}
+run 41.6666 ns
+run 41.6666 ns
+run 41.6666 ns
+run 41.6666 ns
+add_force {/RAM_Controller/write} -radix hex {0 0ns}
+add_force {/RAM_Controller/read} -radix hex {1 0ns}
+add_force {/RAM_Controller/Read_Address} -radix hex {cd 0ns}
+run 41.6666 ns
+run 20.8333325 ns
+add_force {/RAM_Controller/RAM_Data} -radix hex {ab 0ns}
+run 20.8333325 ns
+run 20.8333325 ns
+add_force {/RAM_Controller/RAM_Data} -radix hex {cd 0ns}
+run 20.8333325 ns
+run 20.8333325 ns
+close_sim
+set_property top PM_Controller [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+export_ip_user_files -of_objects  [get_files E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller_24MHz.vhd] -no_script -reset -force -quiet
+remove_files  E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller_24MHz.vhd
+file delete -force E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller_24MHz.vhd
+launch_simulation
+source PM_Controller.tcl
+add_force {/PM_Controller/clk_6} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+add_force {/PM_Controller/clk_12} -radix hex {1 0ns} {0 25000ps} -repeat_every 50000ps
+add_force {/PM_Controller/clk_24} -radix hex {1 0ns} {0 12500ps} -repeat_every 25000ps
+add_force {/PM_Controller/Write} -radix hex {0 0ns}
+add_force {/PM_Controller/Read} -radix hex {0 0ns}
+add_force {/PM_Controller/Boot_Write} -radix hex {0 0ns}
+add_force {/PM_Controller/Program_Read} -radix hex {0 0ns}
+add_force {/PM_Controller/Write_Addr} -radix hex {0 0ns}
+add_force {/PM_Controller/Read_Addr} -radix hex {0 0ns}
+add_force {/PM_Controller/Program_Counter} -radix hex {0 0ns}
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {0 0ns}
+add_force {/PM_Controller/Data_in} -radix hex {0 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {0 0ns}
+run 100 ns
+add_force {/PM_Controller/Addr_space} -radix hex {0 0ns}
+run 100 ns
+run 100 ns
+add_force {/PM_Controller/Boot_Write} -radix hex {1 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {1 0ns}
+run 100 ns
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {1 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {2 0ns}
+run 100 ns
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {2 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {3 0ns}
+run 100 ns
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {3 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {4 0ns}
+run 100 ns
+add_force {/PM_Controller/Boot_Write} -radix hex {0 0ns}
+add_force {/PM_Controller/Program_Read} -radix hex {1 0ns}
+add_force {/PM_Controller/Program_Counter} -radix hex {0 0ns}
+run 100 ns
+add_force {/PM_Controller/Program_Counter} -radix hex {1 0ns}
+run 100 ns
+relaunch_sim
+add_force {/PM_Controller/clk_6} -radix hex {1 0ns} {0 50000ps} -repeat_every 100000ps
+add_force {/PM_Controller/clk_12} -radix hex {1 0ns} {0 25000ps} -repeat_every 50000ps
+add_force {/PM_Controller/clk_24} -radix hex {1 0ns} {0 12500ps} -repeat_every 25000ps
+add_force {/PM_Controller/Write} -radix hex {0 0ns}
+add_force {/PM_Controller/Read} -radix hex {0 0ns}
+add_force {/PM_Controller/Program_Read} -radix hex {0 0ns}
+add_force {/PM_Controller/Boot_Write} -radix hex {0 0ns}
+add_force {/PM_Controller/Addr_space} -radix hex {0 0ns}
+add_force {/PM_Controller/Write_Addr} -radix hex {0 0ns}
+add_force {/PM_Controller/Read_Addr} -radix hex {0 0ns}
+add_force {/PM_Controller/Program_Counter} -radix hex {0 0ns}
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {0 0ns}
+add_force {/PM_Controller/Data_in} -radix hex {0 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {0 0ns}
+save_wave_config {E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/PM_Controller_behav.wcfg}
+run 100 ns
+add_force {/PM_Controller/Boot_Write} -radix hex {1 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {10 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {1 0ns}
+run 100 ns
+add_force {/PM_Controller/Boot_Data_in} -radix hex {2 0ns}
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {1 0ns}
+run 100 ns
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {2 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {3 0ns}
+run 100 ns
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {2 0ns}
+add_force {/PM_Controller/Boot_Write_Addr} -radix hex {3 0ns}
+add_force {/PM_Controller/Boot_Data_in} -radix hex {4 0ns}
+run 100 ns
+save_wave_config {E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.sim/sim_1/behav/PM_Controller_behav.wcfg}
+add_force {/PM_Controller/Boot_Write} -radix hex {0 0ns}
+add_force {/PM_Controller/Program_Read} -radix hex {2 0ns}
+add_force {/PM_Controller/Program_Read} -radix hex {1 0ns}
+run 100 ns
+set_property -dict [list CONFIG.Register_PortA_Output_of_Memory_Primitives {true}] [get_ips Program_BRAM]
+generate_target all [get_files  E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/Program_BRAM/Program_BRAM.xci]
+catch { config_ip_cache -export [get_ips -all Program_BRAM] }
+export_ip_user_files -of_objects [get_files E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/Program_BRAM/Program_BRAM.xci] -no_script -sync -force -quiet
+reset_run Program_BRAM_synth_1
+launch_runs Program_BRAM_synth_1 -jobs 4
+wait_on_run Program_BRAM_synth_1
+export_simulation -of_objects [get_files E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/Program_BRAM/Program_BRAM.xci] -directory E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.ip_user_files/sim_scripts -ip_user_files_dir E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.ip_user_files -ipstatic_source_dir E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.ip_user_files/ipstatic -lib_map_path [list {modelsim=E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/compile_simlib/modelsim} {questa=E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/compile_simlib/questa} {riviera=E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/compile_simlib/riviera} {activehdl=E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+relaunch_sim
+close_sim
+launch_simulation
+reset_run Program_BRAM_synth_1

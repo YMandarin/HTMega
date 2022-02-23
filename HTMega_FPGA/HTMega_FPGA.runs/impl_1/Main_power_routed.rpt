@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date             : Mon Feb 14 20:55:21 2022
+| Date             : Tue Feb 22 18:23:08 2022
 | Host             : YMLap running 64-bit major release  (build 9200)
 | Command          : report_power -file Main_power_routed.rpt -pb Main_power_summary_routed.pb -rpx Main_power_routed.rpx
 | Design           : Main
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.189        |
+| Total On-Chip Power (W)  | 0.184        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.115        |
+| Dynamic (W)              | 0.109        |
 | Device Static (W)        | 0.074        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.1         |
@@ -52,20 +52,20 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.003 |       12 |       --- |             --- |
-| Slice Logic    |    <0.001 |     2428 |       --- |             --- |
-|   LUT as Logic |    <0.001 |     1332 |     20800 |            6.40 |
-|   CARRY4       |    <0.001 |      218 |      8150 |            2.67 |
-|   Register     |    <0.001 |      527 |     41600 |            1.27 |
-|   F7/F8 Muxes  |    <0.001 |       28 |     32600 |            0.09 |
-|   Others       |     0.000 |      160 |       --- |             --- |
-| Signals        |     0.001 |     2250 |       --- |             --- |
-| Block RAM      |     0.013 |       47 |        50 |           94.00 |
+| Clocks         |     0.002 |       12 |       --- |             --- |
+| Slice Logic    |    <0.001 |     3634 |       --- |             --- |
+|   LUT as Logic |    <0.001 |     1840 |     20800 |            8.85 |
+|   CARRY4       |    <0.001 |      274 |      8150 |            3.36 |
+|   Register     |    <0.001 |     1062 |     41600 |            2.55 |
+|   F7/F8 Muxes  |    <0.001 |       43 |     32600 |            0.13 |
+|   Others       |     0.000 |      183 |       --- |             --- |
+| Signals        |     0.001 |     3210 |       --- |             --- |
+| Block RAM      |     0.006 |     47.5 |        50 |           95.00 |
 | MMCM           |     0.093 |        1 |         5 |           20.00 |
 | DSPs           |    <0.001 |        2 |        90 |            2.22 |
-| I/O            |     0.005 |       92 |       106 |           86.79 |
+| I/O            |     0.007 |       92 |       106 |           86.79 |
 | Static Power   |     0.074 |          |           |                 |
-| Total          |     0.189 |          |           |                 |
+| Total          |     0.184 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,9 +75,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.028 |       0.017 |      0.011 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.020 |       0.009 |      0.011 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.064 |       0.052 |      0.013 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -135,8 +135,8 @@ Table of Contents
 | CLK_12_SysClkWizard_1   | Clock/inst/CLK_12_SysClkWizard   |            83.3 |
 | CLK_24_SysClkWizard     | Clock/inst/CLK_24_SysClkWizard   |            41.7 |
 | CLK_24_SysClkWizard_1   | Clock/inst/CLK_24_SysClkWizard   |            41.7 |
-| CLK_48_SysClkWizard     | Clock/inst/CLK_48_SysClkWizard   |            20.8 |
-| CLK_48_SysClkWizard_1   | Clock/inst/CLK_48_SysClkWizard   |            20.8 |
+| CLK_6_SysClkWizard      | Clock/inst/CLK_6_SysClkWizard    |           166.7 |
+| CLK_6_SysClkWizard_1    | Clock/inst/CLK_6_SysClkWizard    |           166.7 |
 | clkfbout_SysClkWizard   | Clock/inst/clkfbout_SysClkWizard |            83.3 |
 | clkfbout_SysClkWizard_1 | Clock/inst/clkfbout_SysClkWizard |            83.3 |
 | sys_clk_pin             | sysclk                           |            83.3 |
@@ -153,13 +153,12 @@ Table of Contents
 +----------+-----------+
 | Name     | Power (W) |
 +----------+-----------+
-| Main     |     0.115 |
-|   ALU    |     0.001 |
+| Main     |     0.109 |
 |   Clock  |     0.093 |
 |     inst |     0.093 |
-|   PM     |     0.015 |
-|     PM   |     0.014 |
-|       U0 |     0.014 |
+|   PM     |     0.007 |
+|     PM   |     0.007 |
+|       U0 |     0.007 |
 +----------+-----------+
 
 

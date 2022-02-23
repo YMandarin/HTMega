@@ -1,0 +1,30 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../HTMega_FPGA.srcs/sources_1/new/Constants.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/ALU_16bit.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/BootLoader.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/Boot_Mode_Controller.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/Bus_Loader.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/GPIO_Interface.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/GPREG.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/GP_Bus.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/GP_RegisterBank.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/Instruction_Decoder.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/Memory_Loader.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/Memory_Writer.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/MicrosCounter.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/Program_Loader.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/RAM_Controller.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/RAM_Loader.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/Special_REG.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/Timers.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/UART_Interface.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/UART_Reciever.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/UART_Transmitter.vhd" \
+"../../../../HTMega_FPGA.srcs/sources_1/new/Main.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,15 @@
+E:\Diplomarbeit\HTMega\HTMegaAssembler\HTMegaAssembler\bin\Release\net6.0\HTMegaAssembler.exe
+E:\Diplomarbeit\HTMega\HTMegaAssembler\HTMegaAssembler\bin\Release\net6.0\HTMegaAssembler.deps.json
+E:\Diplomarbeit\HTMega\HTMegaAssembler\HTMegaAssembler\bin\Release\net6.0\HTMegaAssembler.runtimeconfig.json
+E:\Diplomarbeit\HTMega\HTMegaAssembler\HTMegaAssembler\bin\Release\net6.0\HTMegaAssembler.dll
+E:\Diplomarbeit\HTMega\HTMegaAssembler\HTMegaAssembler\bin\Release\net6.0\HTMegaAssembler.pdb
+E:\Diplomarbeit\HTMega\HTMegaAssembler\HTMegaAssembler\obj\Release\net6.0\HTMegaAssembler.csproj.AssemblyReference.cache
+E:\Diplomarbeit\HTMega\HTMegaAssembler\HTMegaAssembler\obj\Release\net6.0\HTMegaAssembler.GeneratedMSBuildEditorConfig.editorconfig
+E:\Diplomarbeit\HTMega\HTMegaAssembler\HTMegaAssembler\obj\Release\net6.0\HTMegaAssembler.AssemblyInfoInputs.cache
+E:\Diplomarbeit\HTMega\HTMegaAssembler\HTMegaAssembler\obj\Release\net6.0\HTMegaAssembler.AssemblyInfo.cs
+E:\Diplomarbeit\HTMega\HTMegaAssembler\HTMegaAssembler\obj\Release\net6.0\HTMegaAssembler.csproj.CoreCompileInputs.cache
+E:\Diplomarbeit\HTMega\HTMegaAssembler\HTMegaAssembler\obj\Release\net6.0\HTMegaAssembler.dll
+E:\Diplomarbeit\HTMega\HTMegaAssembler\HTMegaAssembler\obj\Release\net6.0\refint\HTMegaAssembler.dll
+E:\Diplomarbeit\HTMega\HTMegaAssembler\HTMegaAssembler\obj\Release\net6.0\HTMegaAssembler.pdb
+E:\Diplomarbeit\HTMega\HTMegaAssembler\HTMegaAssembler\obj\Release\net6.0\HTMegaAssembler.genruntimeconfig.cache
+E:\Diplomarbeit\HTMega\HTMegaAssembler\HTMegaAssembler\obj\Release\net6.0\ref\HTMegaAssembler.dll

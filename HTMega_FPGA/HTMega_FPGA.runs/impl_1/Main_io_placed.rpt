@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date                      : Mon Feb 14 20:54:09 2022
+| Date                      : Tue Feb 22 18:21:43 2022
 | Host                      : YMLap running 64-bit major release  (build 9200)
 | Command                   : report_io -file Main_io_placed.rpt
 | Design                    : Main
@@ -51,7 +51,7 @@ Table of Contents
 | A14        | GPIO[8]       | High Range | IO_L6P_T0_16                 | BIDIR         | LVCMOS33    |      16 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | A15        | GPIO[6]       | High Range | IO_L6N_T0_VREF_16            | BIDIR         | LVCMOS33    |      16 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | A16        | GPIO[2]       | High Range | IO_L12P_T1_MRCC_16           | BIDIR         | LVCMOS33    |      16 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| A17        | LED_out[0]    | High Range | IO_L12N_T1_MRCC_16           | TRISTATE      | LVCMOS33    |      16 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| A17        | LED_out[0]    | High Range | IO_L12N_T1_MRCC_16           | OUTPUT        | LVCMOS33    |      16 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | A18        | Button_in[0]  | High Range | IO_L19N_T3_VREF_16           | INPUT         | LVCMOS33    |      16 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | A19        |               |            | GND                          | GND           |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | B1         |               |            | MGTAVTT                      | Gigabit Power |             |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

@@ -7,7 +7,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 
 entity Bus_Loader is
-    Port ( clk_12 : in STD_LOGIC;
+    Port ( clk_6 : in STD_LOGIC;
            Enable : in STD_LOGIC;
            Start : in STD_LOGIC;
            LoadSecond : in STD_LOGIC;
@@ -31,8 +31,8 @@ Data_out_1 <= data_cache when load_second = '1' else Bus_data_in;
 Data_out_2 <= Bus_data_in when load_second = '1' else X"0000";
 Bus_addr_out <= address_1 when second = '0' else address_2;
 
-process(clk_12) begin
-if rising_edge(clk_12) and enable = '1' then
+process(clk_6) begin
+if rising_edge(clk_6) and enable = '1' then
 	if fin = '1' and Start = '0' then
 		Bus_enable <= '0';
 		second <= '0';
@@ -56,7 +56,7 @@ if rising_edge(clk_12) and enable = '1' then
 	end if; 
 	
 end if;
-if falling_edge(clk_12) then
+if falling_edge(clk_6) then
 	finished <= fin;
 end if;
 end process;

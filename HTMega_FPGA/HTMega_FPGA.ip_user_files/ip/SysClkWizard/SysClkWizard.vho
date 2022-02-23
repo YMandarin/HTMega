@@ -59,6 +59,7 @@
 -- __CLK_24__24.00000______0.000______50.0______600.395____693.818
 -- __CLK_48__48.00000______0.000______50.0______520.694____693.818
 -- __CLK_96__96.00000______0.000______50.0______478.350____693.818
+-- ___CLK_6___6.00000______0.000______50.0______751.587____693.818
 --
 ------------------------------------------------------------------------------
 -- Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -76,6 +77,7 @@ port
   CLK_24          : out    std_logic;
   CLK_48          : out    std_logic;
   CLK_96          : out    std_logic;
+  CLK_6          : out    std_logic;
   -- Status and control signals
   reset             : in     std_logic;
   locked            : out    std_logic;
@@ -94,6 +96,7 @@ your_instance_name : SysClkWizard
    CLK_24 => CLK_24,
    CLK_48 => CLK_48,
    CLK_96 => CLK_96,
+   CLK_6 => CLK_6,
   -- Status and control signals                
    reset => reset,
    locked => locked,

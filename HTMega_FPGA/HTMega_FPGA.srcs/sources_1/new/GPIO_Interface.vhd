@@ -13,10 +13,10 @@ use work.Constants.ALL;
 
 entity GPIO_Interface is
     Port ( 
-    	clk_12 : in STD_LOGIC;
+    	clk_6 : in STD_LOGIC;
 		bus_addr : in STD_LOGIC_VECTOR (7 downto 0);
 		bus_data_in : in STD_LOGIC_VECTOR (15 downto 0);
-		bus_data_out : out STD_LOGIC_VECTOR (15 downto 0);
+		bus_data_out : out STD_LOGIC_VECTOR (15 downto 0) := X"0000";
 		bus_enable, write_enable : in STD_LOGIC;
 		port_Timer_A, port_Timer_B: in STD_LOGIC;
 		Pin_GPIO: inout STD_LOGIC_VECTOR (43 downto 0);
@@ -54,10 +54,11 @@ begin
 	IO_in_C(11 downto 0) <= Pin_GPIO(43 downto 32);
 	IO_in_Board(7 downto 0) <= Pin_PMOD;
 	IO_in_Board(8) <= Pin_button;
-	Pin_LED <= IO_out_Board (11 downto 8);
+	IO_in_Board(12 downto 9) <= IO_out_Board(12 downto 9);
+	Pin_LED <= IO_out_Board (12 downto 9);
 	
-	process(clk_12) begin
-	if falling_edge(clk_12) and bus_enable='1' then
+	process(clk_6) begin
+	if falling_edge(clk_6) and bus_enable='1' then
 		case bus_addr is
 			when AD_PA_IN =>
 				bus_data_out <= IO_in_A;

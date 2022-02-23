@@ -7,7 +7,7 @@ use work.Constants.ALL;
 
 entity Instruction_Decoder is
     Port ( 
-		clk_12 : in STD_LOGIC;
+		clk_6 : in STD_LOGIC;
 		Reset : in STD_LOGIC;
 		Start_decoder : in STD_LOGIC;
 
@@ -29,7 +29,7 @@ entity Instruction_Decoder is
 		Immediate : out STD_LOGIC_VECTOR(15 downto 0) := X"0000";
 		
 		Bus_load, Bus_load_second, Bus_write : out STD_LOGIC := '0';
-		Bus_addr_1, Bus_addr_2 : out STD_LOGIC_VECTOR(7 downto 0) := X"00";
+		Bus_load_addr_1, Bus_load_addr_2, Bus_write_addr : out STD_LOGIC_VECTOR(7 downto 0) := X"00";
 		
 		RAM_load, RAM_write : out STD_LOGIC := '0';
 		RAM_addr : out STD_LOGIC_VECTOR(15 downto 0) := X"0000";
@@ -42,7 +42,7 @@ end Instruction_Decoder;
 architecture Behavioral of Instruction_Decoder is
 
 signal instr_type : std_logic_vector(2 downto 0);
-signal running, execute : std_logic := '0';
+signal execute, bus_write_use_op2 : std_logic := '0';
 signal mem_addr, OP_Data_2: std_logic_vector(15 downto 0) := X"0000";
 signal PC : unsigned(15 downto 0) := X"FFFF";
 signal PC_branch, PC_branch_relative, PC_branch_indirect : std_logic := '0';
@@ -51,15 +51,17 @@ signal PC_branched, PC_branch_in, PC_new : unsigned(15 downto 0) := X"0000";
 signal Instruction, OP_Data_1 : std_logic_vector(7 downto 0) := X"00";
 begin
 
-Instruction <= PM_Data_1_in(15 downto 8);
-instr_type <= PM_Data_1_in(15 downto 13);
+Instruction <= PM_Data_1_in(7 downto 0);
+instr_type <= PM_Data_1_in(7 downto 5);
 Immediate <= OP_Data_2;
-Bus_addr_1 <= OP_Data_1;
-Bus_addr_2 <= OP_Data_2(7 downto 0);
+Bus_load_addr_1 <= OP_Data_1;
+Bus_load_addr_2 <= OP_Data_2(7 downto 0);
+Bus_write_addr <= OP_Data_2(7 downto 0) when bus_write_use_op2 = '1' else OP_Data_1;
 
-PC_branch_in <= unsigned(Zreg_in) when PC_branch_indirect = '0' else unsigned(OP_Data_2);
+PC_branch_in <= unsigned(Zreg_in) when PC_branch_indirect = '1' else unsigned(OP_Data_2);
 PC_branched <= PC_branch_in when PC_branch_relative = '0' else (PC + PC_branch_in + 1);
 PC_new <= PC + 1 when PC_branch = '0' else PC_branched;
+PC_out <= std_logic_vector(PC);
 
 with mem_addr_sel select mem_addr <=
 	OP_Data_2  when "01",
@@ -70,16 +72,15 @@ with mem_addr_sel select mem_addr <=
 RAM_addr <= mem_addr;
 PM_addr <= mem_addr;
 	
-process(clk_12) begin
-if rising_edge(clk_12) then
+process(clk_6) begin
+if rising_edge(clk_6) then
 	execute <= '0';
 	SP_dec <= '0';
 	SP_inc <= '0';
 	Program_stopped <= '0';
-	if Reset = '0' and ((running = '1' and Start_decoder = '1') or running = '0') then
-		OP_Data_1 <= PM_Data_1_in(7 downto 0);
+	if Start_decoder = '1' and Reset = '0' then
+		OP_Data_1 <= PM_Data_1_in(15 downto 8);
 		OP_Data_2 <= PM_Data_2_in;
-		running <= '1';
 		execute <= '1';
 		ALU_enable <= '0';
 		Use_imdt <= '0';
@@ -89,22 +90,25 @@ if rising_edge(clk_12) then
 		mem_addr_sel <= "00";
 		RAM_load <= '0';
 		RAM_write <= '0';
-		
+		bus_write_use_op2  <= '0';
+		PC_branch <= '0';
+		PC_branch_relative <= '0';
+		PC_branch_indirect <= '0';
+		 
 		case instr_type is
 			
-			when "000" => -- General
-				if Instruction(4 downto 2) = "001" then
-					execute <= '0';
-					running <= '0';
-					Program_stopped <= '1';
-					PC <= X"FFFF";
-				end if;
-				
+			when "000" => -- NOP
+			
+			when "111" => -- STOP 
+                execute <= '0';
+                Program_stopped <= '1';
+                
 			when "001" => -- Data Transfer
 				case Instruction(4 downto 1) is
 					when "0000" => -- MOV
 						Bus_write <= '1';
 						Bus_load <= '1';
+						bus_write_use_op2 <= '1';
 					when "0001" => -- LD
 						Bus_write <= '1';
 						RAM_load <= '1';
@@ -231,14 +235,23 @@ if rising_edge(clk_12) then
 		end case;
 	end if;
 	if Reset = '1' then
-		running <= '0';
+	    PC <= X"0000";
+	    ALU_enable <= '0';
+		Use_imdt <= '0';
+		Bus_load <= '0';
+		Bus_load_second <= '0';
+		Bus_write <= '0';
+		mem_addr_sel <= "00";
+		RAM_load <= '0';
+		RAM_write <= '0';
 	end if;
 end if;
 
-if falling_edge(clk_12) then
+if falling_edge(clk_6) then
 	Start_execution <= execute;
-	PC <= PC_new;
-	PC_out <= std_logic_vector(PC);
+	if execute = '1' then
+        PC <= PC_new;
+	end if;
 end if;
 end process;
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1644868256">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1645550285">
   <File Type="ROUTE-PWR" Name="Main_power_routed.rpt"/>
   <File Type="PA-TCL" Name="Main.tcl"/>
   <File Type="BITSTR-MMI" Name="Main.mmi"/>
@@ -179,12 +179,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/RAM_Controller_24MHz.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/RAM_Loader.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -229,6 +223,13 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Main.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/boot_test.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>

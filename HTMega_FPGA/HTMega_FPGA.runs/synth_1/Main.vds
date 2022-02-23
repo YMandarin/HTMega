@@ -2,8 +2,8 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Mon Feb 14 20:51:00 2022
-# Process ID: 29316
+# Start of session at: Tue Feb 22 18:18:09 2022
+# Process ID: 29980
 # Current directory: E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/synth_1
 # Command line: vivado.exe -log Main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main.tcl
 # Log file: E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/synth_1/Main.vds
@@ -11,7 +11,6 @@
 # Running On: YMLap, OS: Windows, CPU Frequency: 2712 MHz, CPU Physical cores: 4, Host memory: 51428 MB
 #-----------------------------------------------------------
 source Main.tcl -notrace
-create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1250.375 ; gain = 11.023
 Command: read_checkpoint -auto_incremental -incremental E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/utils_1/imports/synth_1/Boot_Mode_Controller.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/utils_1/imports/synth_1/Boot_Mode_Controller.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -24,32 +23,30 @@ WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis b
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1904
+INFO: [Synth 8-7075] Helper process launched with PID 31500
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1250.375 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1249.320 ; gain = 0.000
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-1565] actual for formal port clk is neither a static name nor a globally static expression [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/BootLoader.vhd:41]
 WARNING: [Synth 8-1565] actual for formal port clk is neither a static name nor a globally static expression [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/BootLoader.vhd:48]
-WARNING: [Synth 8-1565] actual for formal port clk is neither a static name nor a globally static expression [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_RegisterBank.vhd:29]
+WARNING: [Synth 8-1565] actual for formal port clk is neither a static name nor a globally static expression [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_RegisterBank.vhd:30]
 WARNING: [Synth 8-1565] actual for formal port clka is neither a static name nor a globally static expression [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd:59]
-WARNING: [Synth 8-1565] actual for formal port address is neither a static name nor a globally static expression [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller.vhd:43]
 WARNING: [Synth 8-1565] actual for formal port clk is neither a static name nor a globally static expression [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/UART_Interface.vhd:47]
 WARNING: [Synth 8-1565] actual for formal port clk is neither a static name nor a globally static expression [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/UART_Interface.vhd:52]
 INFO: [Synth 8-638] synthesizing module 'Main' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:22]
-INFO: [Synth 8-3491] module 'SysClkWizard' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/synth_1/.Xil/Vivado-29316-YMLap/realtime/SysClkWizard_stub.vhdl:5' bound to instance 'Clock' of component 'SysClkWizard' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:247]
-INFO: [Synth 8-638] synthesizing module 'SysClkWizard' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/synth_1/.Xil/Vivado-29316-YMLap/realtime/SysClkWizard_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'Instruction_Decoder' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Instruction_Decoder.vhd:8' bound to instance 'Decoder' of component 'Instruction_Decoder' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:253]
+INFO: [Synth 8-3491] module 'SysClkWizard' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/synth_1/.Xil/Vivado-29980-YMLap/realtime/SysClkWizard_stub.vhdl:5' bound to instance 'Clock' of component 'SysClkWizard' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:251]
+INFO: [Synth 8-638] synthesizing module 'SysClkWizard' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/synth_1/.Xil/Vivado-29980-YMLap/realtime/SysClkWizard_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'Instruction_Decoder' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Instruction_Decoder.vhd:8' bound to instance 'Decoder' of component 'Instruction_Decoder' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:257]
 INFO: [Synth 8-638] synthesizing module 'Instruction_Decoder' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Instruction_Decoder.vhd:42]
-INFO: [Synth 8-226] default block is never used [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Instruction_Decoder.vhd:190]
-WARNING: [Synth 8-6014] Unused sequential element PC_reg was removed.  [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Instruction_Decoder.vhd:100]
+INFO: [Synth 8-226] default block is never used [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Instruction_Decoder.vhd:194]
 INFO: [Synth 8-256] done synthesizing module 'Instruction_Decoder' (1#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Instruction_Decoder.vhd:42]
-INFO: [Synth 8-3491] module 'ALU_16bit' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/ALU_16bit.vhd:9' bound to instance 'ALU' of component 'ALU_16bit' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:275]
+INFO: [Synth 8-3491] module 'ALU_16bit' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/ALU_16bit.vhd:9' bound to instance 'ALU' of component 'ALU_16bit' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:279]
 INFO: [Synth 8-638] synthesizing module 'ALU_16bit' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/ALU_16bit.vhd:23]
 INFO: [Synth 8-256] done synthesizing module 'ALU_16bit' (2#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/ALU_16bit.vhd:23]
-INFO: [Synth 8-3491] module 'Program_Loader' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Program_Loader.vhd:4' bound to instance 'PM_Loader' of component 'Program_Loader' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:286]
-INFO: [Synth 8-638] synthesizing module 'Program_Loader' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Program_Loader.vhd:12]
-INFO: [Synth 8-256] done synthesizing module 'Program_Loader' (3#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Program_Loader.vhd:12]
-INFO: [Synth 8-3491] module 'Memory_Loader' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Memory_Loader.vhd:10' bound to instance 'Loader' of component 'Memory_Loader' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:292]
+INFO: [Synth 8-3491] module 'Program_Loader' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Program_Loader.vhd:4' bound to instance 'PM_Loader' of component 'Program_Loader' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:290]
+INFO: [Synth 8-638] synthesizing module 'Program_Loader' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Program_Loader.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'Program_Loader' (3#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Program_Loader.vhd:13]
+INFO: [Synth 8-3491] module 'Memory_Loader' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Memory_Loader.vhd:10' bound to instance 'Loader' of component 'Memory_Loader' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:296]
 INFO: [Synth 8-638] synthesizing module 'Memory_Loader' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Memory_Loader.vhd:34]
 INFO: [Synth 8-3491] module 'Bus_Loader' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Bus_Loader.vhd:9' bound to instance 'Bus_Loader_inst' of component 'Bus_Loader' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Memory_Loader.vhd:92]
 INFO: [Synth 8-638] synthesizing module 'Bus_Loader' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Bus_Loader.vhd:24]
@@ -60,32 +57,29 @@ INFO: [Synth 8-638] synthesizing module 'RAM_Loader' [E:/Diplomarbeit/HTMega/HTM
 INFO: [Synth 8-256] done synthesizing module 'RAM_Loader' (5#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Loader.vhd:21]
 INFO: [Synth 8-3491] module 'RAM_Loader' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Loader.vhd:9' bound to instance 'PM_loader_inst' of component 'RAM_Loader' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Memory_Loader.vhd:114]
 INFO: [Synth 8-256] done synthesizing module 'Memory_Loader' (6#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Memory_Loader.vhd:34]
-INFO: [Synth 8-3491] module 'Memory_Writer' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Memory_Writer.vhd:10' bound to instance 'Writer' of component 'Memory_Writer' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:312]
+INFO: [Synth 8-3491] module 'Memory_Writer' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Memory_Writer.vhd:10' bound to instance 'Writer' of component 'Memory_Writer' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:316]
 INFO: [Synth 8-638] synthesizing module 'Memory_Writer' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Memory_Writer.vhd:34]
 INFO: [Synth 8-256] done synthesizing module 'Memory_Writer' (7#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Memory_Writer.vhd:34]
-INFO: [Synth 8-3491] module 'GP_Bus_Master' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:10' bound to instance 'GP_Bus' of component 'GP_Bus_Master' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:329]
-INFO: [Synth 8-638] synthesizing module 'GP_Bus_Master' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:34]
-INFO: [Synth 8-3491] module 'GP_Bus' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus.vhd:10' bound to instance 'Bus_Controller' of component 'GP_Bus' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:127]
+INFO: [Synth 8-3491] module 'GP_Bus_Master' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:5' bound to instance 'GP_Bus' of component 'GP_Bus_Master' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:333]
+INFO: [Synth 8-638] synthesizing module 'GP_Bus_Master' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:29]
+INFO: [Synth 8-3491] module 'GP_Bus' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus.vhd:10' bound to instance 'Bus_Controller' of component 'GP_Bus' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:123]
 INFO: [Synth 8-638] synthesizing module 'GP_Bus' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus.vhd:28]
-WARNING: [Synth 8-614] signal 'Master_Bus_enable' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus.vhd:45]
-WARNING: [Synth 8-614] signal 'clk_12' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus.vhd:45]
+WARNING: [Synth 8-614] signal 'clk_6' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus.vhd:45]
 INFO: [Synth 8-256] done synthesizing module 'GP_Bus' (8#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus.vhd:28]
-WARNING: [Synth 8-5640] Port 'clk_24' is missing in component declaration [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:53]
-INFO: [Synth 8-3491] module 'GP_RegisterBank' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_RegisterBank.vhd:5' bound to instance 'GPREG' of component 'GP_RegisterBank' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:135]
-INFO: [Synth 8-638] synthesizing module 'GP_RegisterBank' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_RegisterBank.vhd:14]
-INFO: [Synth 8-3491] module 'GPREG' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GPREG.vhd:11' bound to instance 'Reg' of component 'GPREG' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_RegisterBank.vhd:29]
+INFO: [Synth 8-3491] module 'GP_RegisterBank' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_RegisterBank.vhd:5' bound to instance 'GPREG' of component 'GP_RegisterBank' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:131]
+INFO: [Synth 8-638] synthesizing module 'GP_RegisterBank' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_RegisterBank.vhd:15]
+INFO: [Synth 8-3491] module 'GPREG' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GPREG.vhd:11' bound to instance 'Reg' of component 'GPREG' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_RegisterBank.vhd:30]
 INFO: [Synth 8-638] synthesizing module 'GPREG' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GPREG.vhd:22]
-INFO: [Synth 8-3491] module 'GPREG_IP' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/synth_1/.Xil/Vivado-29316-YMLap/realtime/GPREG_IP_stub.vhdl:5' bound to instance 'BRAM' of component 'GPREG_IP' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GPREG.vhd:34]
-INFO: [Synth 8-638] synthesizing module 'GPREG_IP' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/synth_1/.Xil/Vivado-29316-YMLap/realtime/GPREG_IP_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'GPREG_IP' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/synth_1/.Xil/Vivado-29980-YMLap/realtime/GPREG_IP_stub.vhdl:5' bound to instance 'BRAM' of component 'GPREG_IP' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GPREG.vhd:34]
+INFO: [Synth 8-638] synthesizing module 'GPREG_IP' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/synth_1/.Xil/Vivado-29980-YMLap/realtime/GPREG_IP_stub.vhdl:17]
 INFO: [Synth 8-256] done synthesizing module 'GPREG' (9#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GPREG.vhd:22]
-WARNING: [Synth 8-614] signal 'enable' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_RegisterBank.vhd:34]
-WARNING: [Synth 8-614] signal 'clk_12' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_RegisterBank.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'GP_RegisterBank' (10#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_RegisterBank.vhd:14]
-INFO: [Synth 8-3491] module 'GPIO_Interface' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GPIO_Interface.vhd:14' bound to instance 'GPIO' of component 'GPIO_Interface' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:141]
+WARNING: [Synth 8-614] signal 'enable' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_RegisterBank.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'GP_RegisterBank' (10#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_RegisterBank.vhd:15]
+INFO: [Synth 8-3491] module 'GPIO_Interface' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GPIO_Interface.vhd:14' bound to instance 'GPIO' of component 'GPIO_Interface' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:137]
 INFO: [Synth 8-638] synthesizing module 'GPIO_Interface' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GPIO_Interface.vhd:29]
-WARNING: [Synth 8-614] signal 'bus_enable' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GPIO_Interface.vhd:59]
+WARNING: [Synth 8-614] signal 'bus_enable' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GPIO_Interface.vhd:60]
 INFO: [Synth 8-256] done synthesizing module 'GPIO_Interface' (11#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GPIO_Interface.vhd:29]
-INFO: [Synth 8-3491] module 'UART_Interface' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/UART_Interface.vhd:8' bound to instance 'UART' of component 'UART_Interface' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:149]
+INFO: [Synth 8-3491] module 'UART_Interface' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/UART_Interface.vhd:8' bound to instance 'UART' of component 'UART_Interface' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:145]
 INFO: [Synth 8-638] synthesizing module 'UART_Interface' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/UART_Interface.vhd:19]
 INFO: [Synth 8-3491] module 'UART_Transmitter' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/UART_Transmitter.vhd:9' bound to instance 'Transmitter' of component 'UART_Transmitter' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/UART_Interface.vhd:45]
 INFO: [Synth 8-638] synthesizing module 'UART_Transmitter' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/UART_Transmitter.vhd:17]
@@ -94,110 +88,54 @@ INFO: [Synth 8-256] done synthesizing module 'UART_Transmitter' (12#1) [E:/Diplo
 INFO: [Synth 8-3491] module 'UART_Reciever' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/UART_Reciever.vhd:9' bound to instance 'Receiver' of component 'UART_Reciever' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/UART_Interface.vhd:51]
 INFO: [Synth 8-638] synthesizing module 'UART_Reciever' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/UART_Reciever.vhd:16]
 INFO: [Synth 8-256] done synthesizing module 'UART_Reciever' (13#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/UART_Reciever.vhd:16]
-WARNING: [Synth 8-614] signal 'bus_enable' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/UART_Interface.vhd:57]
 INFO: [Synth 8-256] done synthesizing module 'UART_Interface' (14#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/UART_Interface.vhd:19]
-INFO: [Synth 8-3491] module 'Timers' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timers.vhd:10' bound to instance 'Timer' of component 'Timers' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:156]
+INFO: [Synth 8-3491] module 'Timers' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timers.vhd:10' bound to instance 'Timer' of component 'Timers' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:152]
 INFO: [Synth 8-638] synthesizing module 'Timers' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timers.vhd:20]
-INFO: [Synth 8-3491] module 'Timer_16bit' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd:9' bound to instance 'Timer_A' of component 'Timer_16bit' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timers.vhd:49]
-INFO: [Synth 8-638] synthesizing module 'Timer_16bit' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd:21]
-INFO: [Synth 8-226] default block is never used [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd:70]
-INFO: [Synth 8-226] default block is never used [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd:97]
-WARNING: [Synth 8-614] signal 'enabled' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd:38]
-INFO: [Synth 8-256] done synthesizing module 'Timer_16bit' (15#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd:21]
-INFO: [Synth 8-3491] module 'Timer_16bit' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd:9' bound to instance 'Timer_B' of component 'Timer_16bit' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timers.vhd:54]
-INFO: [Synth 8-3491] module 'MicrosCounter' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/MicrosCounter.vhd:11' bound to instance 'Timer_Micros' of component 'MicrosCounter' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timers.vhd:61]
-INFO: [Synth 8-638] synthesizing module 'MicrosCounter' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/MicrosCounter.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'MicrosCounter' (16#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/MicrosCounter.vhd:17]
-WARNING: [Synth 8-614] signal 'bus_enable' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timers.vhd:65]
+INFO: [Synth 8-3491] module 'Timer_16bit' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd:6' bound to instance 'Timer_A' of component 'Timer_16bit' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timers.vhd:48]
+INFO: [Synth 8-638] synthesizing module 'Timer_16bit' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd:18]
+INFO: [Synth 8-226] default block is never used [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd:57]
+INFO: [Synth 8-226] default block is never used [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd:84]
+WARNING: [Synth 8-614] signal 'clear_buffer' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd:35]
+WARNING: [Synth 8-614] signal 'enabled' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'Timer_16bit' (15#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd:18]
+INFO: [Synth 8-3491] module 'Timer_16bit' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd:6' bound to instance 'Timer_B' of component 'Timer_16bit' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timers.vhd:53]
+INFO: [Synth 8-3491] module 'MicrosCounter' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/MicrosCounter.vhd:6' bound to instance 'Timer_Micros' of component 'MicrosCounter' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timers.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'MicrosCounter' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/MicrosCounter.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'MicrosCounter' (16#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/MicrosCounter.vhd:12]
 INFO: [Synth 8-256] done synthesizing module 'Timers' (17#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timers.vhd:20]
-INFO: [Synth 8-3491] module 'Special_Registers' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Special_REG.vhd:11' bound to instance 'SREG' of component 'Special_Registers' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:163]
+INFO: [Synth 8-3491] module 'Special_Registers' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Special_REG.vhd:11' bound to instance 'SREG' of component 'Special_Registers' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:159]
 INFO: [Synth 8-638] synthesizing module 'Special_Registers' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Special_REG.vhd:27]
 INFO: [Synth 8-256] done synthesizing module 'Special_Registers' (18#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Special_REG.vhd:27]
-INFO: [Synth 8-256] done synthesizing module 'GP_Bus_Master' (19#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:34]
-INFO: [Synth 8-3491] module 'RAM_Controller' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller.vhd:6' bound to instance 'RAM' of component 'RAM_Controller' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:344]
+INFO: [Synth 8-256] done synthesizing module 'GP_Bus_Master' (19#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/GP_Bus_Master.vhd:29]
+INFO: [Synth 8-3491] module 'RAM_Controller' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller.vhd:6' bound to instance 'RAM' of component 'RAM_Controller' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:349]
 INFO: [Synth 8-638] synthesizing module 'RAM_Controller' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller.vhd:21]
-INFO: [Synth 8-3491] module 'RAM_Controller_24MHz' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller_24MHz.vhd:4' bound to instance 'Controller' of component 'RAM_Controller_24MHz' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller.vhd:42]
-INFO: [Synth 8-638] synthesizing module 'RAM_Controller_24MHz' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller_24MHz.vhd:17]
-WARNING: [Synth 8-614] signal 'clk_24_buffer' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller_24MHz.vhd:33]
-INFO: [Synth 8-256] done synthesizing module 'RAM_Controller_24MHz' (20#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller_24MHz.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'RAM_Controller' (21#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller.vhd:21]
-INFO: [Synth 8-3491] module 'PM_Controller' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd:5' bound to instance 'PM' of component 'PM_Controller' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:354]
+WARNING: [Synth 8-614] signal 'read_buffer' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller.vhd:42]
+WARNING: [Synth 8-6014] Unused sequential element clk_6_buffer_reg was removed.  [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller.vhd:45]
+WARNING: [Synth 8-5787] Register Data_out_reg in module RAM_Controller is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller.vhd:51]
+WARNING: [Synth 8-5787] Register Data_out_reg in module RAM_Controller is clocked by two different clocks in the same process. This may cause simulation mismatches and synthesis errors. Consider using different process statements  [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'RAM_Controller' (20#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller.vhd:21]
+INFO: [Synth 8-3491] module 'PM_Controller' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd:5' bound to instance 'PM' of component 'PM_Controller' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:358]
 INFO: [Synth 8-638] synthesizing module 'PM_Controller' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd:17]
-INFO: [Synth 8-3491] module 'Program_BRAM' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/synth_1/.Xil/Vivado-29316-YMLap/realtime/Program_BRAM_stub.vhdl:5' bound to instance 'PM' of component 'Program_BRAM' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd:58]
-INFO: [Synth 8-638] synthesizing module 'Program_BRAM' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/synth_1/.Xil/Vivado-29316-YMLap/realtime/Program_BRAM_stub.vhdl:16]
-WARNING: [Synth 8-614] signal 'clk_24' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd:66]
+INFO: [Synth 8-3491] module 'Program_BRAM' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/synth_1/.Xil/Vivado-29980-YMLap/realtime/Program_BRAM_stub.vhdl:5' bound to instance 'PM' of component 'Program_BRAM' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd:58]
+INFO: [Synth 8-638] synthesizing module 'Program_BRAM' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/synth_1/.Xil/Vivado-29980-YMLap/realtime/Program_BRAM_stub.vhdl:16]
+WARNING: [Synth 8-614] signal 'clk_6' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd:66]
+WARNING: [Synth 8-614] signal 'Program_Read' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd:66]
 WARNING: [Synth 8-6014] Unused sequential element write_addr_buffer_reg was removed.  [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd:73]
 WARNING: [Synth 8-6014] Unused sequential element read_addr_buffer_reg was removed.  [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd:74]
-INFO: [Synth 8-256] done synthesizing module 'PM_Controller' (22#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd:17]
-INFO: [Synth 8-3491] module 'BootLoader' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/BootLoader.vhd:8' bound to instance 'BootLoaderI' of component 'BootLoader' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:364]
+INFO: [Synth 8-256] done synthesizing module 'PM_Controller' (21#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd:17]
+INFO: [Synth 8-3491] module 'BootLoader' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/BootLoader.vhd:8' bound to instance 'BootLoaderI' of component 'BootLoader' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:368]
 INFO: [Synth 8-638] synthesizing module 'BootLoader' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/BootLoader.vhd:20]
 INFO: [Synth 8-3491] module 'UART_Reciever' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/UART_Reciever.vhd:9' bound to instance 'Receiver' of component 'UART_Reciever' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/BootLoader.vhd:40]
 INFO: [Synth 8-3491] module 'UART_Transmitter' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/UART_Transmitter.vhd:9' bound to instance 'Transmitter' of component 'UART_Transmitter' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/BootLoader.vhd:47]
-INFO: [Synth 8-256] done synthesizing module 'BootLoader' (23#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/BootLoader.vhd:20]
-INFO: [Synth 8-3491] module 'Boot_Mode_Controller' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Boot_Mode_Controller.vhd:5' bound to instance 'Boot_Controller' of component 'Boot_Mode_Controller' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:373]
+WARNING: [Synth 8-614] signal 'clk_locked' is read in the process but is not in the sensitivity list [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/BootLoader.vhd:55]
+INFO: [Synth 8-256] done synthesizing module 'BootLoader' (22#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/BootLoader.vhd:20]
+INFO: [Synth 8-3491] module 'Boot_Mode_Controller' declared at 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Boot_Mode_Controller.vhd:5' bound to instance 'Boot_Controller' of component 'Boot_Mode_Controller' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:377]
 INFO: [Synth 8-638] synthesizing module 'Boot_Mode_Controller' [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Boot_Mode_Controller.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'Boot_Mode_Controller' (24#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Boot_Mode_Controller.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'Main' (25#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:22]
-WARNING: [Synth 8-3917] design Main has port RAM_Addr[18] driven by constant 0
+INFO: [Synth 8-256] done synthesizing module 'Boot_Mode_Controller' (23#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Boot_Mode_Controller.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'Main' (24#1) [E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Main.vhd:22]
 WARNING: [Synth 8-7129] Port parity_type in module UART_Transmitter is either unconnected or has no load
 WARNING: [Synth 8-7129] Port reset in module MicrosCounter is either unconnected or has no load
 WARNING: [Synth 8-7129] Port port_Timer_B in module GPIO_Interface is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Data_in[15] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Data_in[14] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Data_in[13] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Data_in[12] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Data_in[11] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Data_in[10] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Data_in[9] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Data_in[8] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Data_in[7] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Data_in[6] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Data_in[5] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Data_in[4] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Data_in[3] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Data_in[2] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Data_in[1] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Data_in[0] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Bus_Addr_in[7] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Bus_Addr_in[6] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Bus_Addr_in[5] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Bus_Addr_in[4] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Bus_Addr_in[3] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Bus_Addr_in[2] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Bus_Addr_in[1] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Bus_Addr_in[0] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RAM_Addr_in[15] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RAM_Addr_in[14] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RAM_Addr_in[13] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RAM_Addr_in[12] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RAM_Addr_in[11] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RAM_Addr_in[10] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RAM_Addr_in[9] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RAM_Addr_in[8] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RAM_Addr_in[7] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RAM_Addr_in[6] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RAM_Addr_in[5] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RAM_Addr_in[4] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RAM_Addr_in[3] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RAM_Addr_in[2] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RAM_Addr_in[1] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port RAM_Addr_in[0] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PM_Addr_in[15] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PM_Addr_in[14] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PM_Addr_in[13] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PM_Addr_in[12] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PM_Addr_in[11] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PM_Addr_in[10] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PM_Addr_in[9] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PM_Addr_in[8] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PM_Addr_in[7] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PM_Addr_in[6] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PM_Addr_in[5] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PM_Addr_in[4] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PM_Addr_in[3] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PM_Addr_in[2] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PM_Addr_in[1] in module Memory_Writer is either unconnected or has no load
-WARNING: [Synth 8-7129] Port PM_Addr_in[0] in module Memory_Writer is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Address_pm[15] in module Memory_Loader is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Address_pm[14] in module Memory_Loader is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Address_pm[13] in module Memory_Loader is either unconnected or has no load
@@ -214,20 +152,19 @@ WARNING: [Synth 8-7129] Port Address_pm[3] in module Memory_Loader is either unc
 WARNING: [Synth 8-7129] Port Address_pm[2] in module Memory_Loader is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Address_pm[1] in module Memory_Loader is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Address_pm[0] in module Memory_Loader is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED_out[0] in module Main is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1250.375 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1249.320 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1250.375 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1249.320 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1250.375 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1249.320 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 1250.375 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.067 . Memory (MB): peak = 1249.320 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -254,91 +191,90 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1287.641 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1275.598 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1287.641 ; gain = 0.000
-WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'GP_Bus/GPREG/Reg/BRAM' at clock pin 'clka' is different from the actual clock period '10.417', this can lead to different synthesis results.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1275.598 ; gain = 0.000
 WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1290.621 ; gain = 40.246
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1275.598 ; gain = 26.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1290.621 ; gain = 40.246
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1275.598 ; gain = 26.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for sysclk. (constraint file  e:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.gen/sources_1/ip/SysClkWizard/SysClkWizard/SysClkWizard_in_context.xdc, line 6).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sysclk. (constraint file  e:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.gen/sources_1/ip/SysClkWizard/SysClkWizard/SysClkWizard_in_context.xdc, line 7).
+Applied set_property IO_BUFFER_TYPE = NONE for sysclk. (constraint file  e:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.gen/sources_1/ip/SysClkWizard/SysClkWizard/SysClkWizard_in_context.xdc, line 7).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sysclk. (constraint file  e:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.gen/sources_1/ip/SysClkWizard/SysClkWizard/SysClkWizard_in_context.xdc, line 8).
 Applied set_property KEEP_HIERARCHY = SOFT for PM/PM. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Clock. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for GP_Bus/GPREG/Reg/BRAM. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1290.621 ; gain = 40.246
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1275.598 ; gain = 26.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1290.621 ; gain = 40.246
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1275.598 ; gain = 26.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   25 Bit       Adders := 1     
 	   2 Input   17 Bit       Adders := 1     
 	   3 Input   17 Bit       Adders := 2     
 	   3 Input   16 Bit       Adders := 1     
 	   2 Input   16 Bit       Adders := 8     
 	   2 Input   12 Bit       Adders := 1     
-	   2 Input    4 Bit       Adders := 5     
-	   2 Input    3 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 2     
 +---XORs : 
 	   2 Input     17 Bit         XORs := 1     
 	   2 Input      1 Bit         XORs := 14    
 +---Registers : 
-	               25 Bit    Registers := 1     
+	               24 Bit    Registers := 1     
 	               17 Bit    Registers := 2     
-	               16 Bit    Registers := 35    
+	               16 Bit    Registers := 38    
 	               12 Bit    Registers := 1     
 	                8 Bit    Registers := 17    
 	                5 Bit    Registers := 2     
-	                4 Bit    Registers := 6     
-	                3 Bit    Registers := 1     
+	                4 Bit    Registers := 5     
+	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 84    
+	                1 Bit    Registers := 88    
 +---Muxes : 
-	   2 Input   25 Bit        Muxes := 1     
-	  26 Input   17 Bit        Muxes := 1     
+	   2 Input   24 Bit        Muxes := 1     
+	  27 Input   17 Bit        Muxes := 1     
 	   4 Input   17 Bit        Muxes := 1     
 	   2 Input   17 Bit        Muxes := 2     
 	   3 Input   17 Bit        Muxes := 1     
-	   2 Input   16 Bit        Muxes := 16    
-	   4 Input   16 Bit        Muxes := 3     
-	   6 Input   16 Bit        Muxes := 1     
-	   8 Input   15 Bit        Muxes := 2     
-	   2 Input    8 Bit        Muxes := 11    
+	   2 Input   16 Bit        Muxes := 22    
+	   4 Input   16 Bit        Muxes := 2     
+	   7 Input   16 Bit        Muxes := 1     
+	   8 Input   14 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 16    
 	   2 Input    7 Bit        Muxes := 2     
 	   4 Input    7 Bit        Muxes := 2     
-	   7 Input    5 Bit        Muxes := 2     
+	   8 Input    5 Bit        Muxes := 1     
+	   7 Input    5 Bit        Muxes := 1     
 	   2 Input    4 Bit        Muxes := 6     
 	   4 Input    4 Bit        Muxes := 2     
-	  22 Input    2 Bit        Muxes := 1     
-	  26 Input    2 Bit        Muxes := 1     
-	  13 Input    1 Bit        Muxes := 11    
-	   8 Input    1 Bit        Muxes := 2     
-	   7 Input    1 Bit        Muxes := 4     
-	   2 Input    1 Bit        Muxes := 107   
-	  22 Input    1 Bit        Muxes := 9     
-	   4 Input    1 Bit        Muxes := 15    
+	  23 Input    2 Bit        Muxes := 1     
+	  27 Input    2 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 123   
+	  14 Input    1 Bit        Muxes := 1     
+	  23 Input    1 Bit        Muxes := 10    
+	  13 Input    1 Bit        Muxes := 9     
+	   4 Input    1 Bit        Muxes := 14    
 	   5 Input    1 Bit        Muxes := 2     
-	  11 Input    1 Bit        Muxes := 10    
+	  11 Input    1 Bit        Muxes := 12    
 	   3 Input    1 Bit        Muxes := 1     
 	   6 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
@@ -361,7 +297,6 @@ DSP Report: Generating DSP Q_MUL, operation Mode is: A*B.
 DSP Report: operator Q_MUL is absorbed into DSP Q_MUL.
 DSP Report: Generating DSP Q_MULS0, operation Mode is: A*B.
 DSP Report: operator Q_MULS0 is absorbed into DSP Q_MULS0.
-WARNING: [Synth 8-3917] design Main has port RAM_Addr[18] driven by constant 0
 WARNING: [Synth 8-7129] Port Address_pm[15] in module Memory_Loader is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Address_pm[14] in module Memory_Loader is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Address_pm[13] in module Memory_Loader is either unconnected or has no load
@@ -378,9 +313,8 @@ WARNING: [Synth 8-7129] Port Address_pm[3] in module Memory_Loader is either unc
 WARNING: [Synth 8-7129] Port Address_pm[2] in module Memory_Loader is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Address_pm[1] in module Memory_Loader is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Address_pm[0] in module Memory_Loader is either unconnected or has no load
-WARNING: [Synth 8-7129] Port LED_out[0] in module Main is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1290.621 ; gain = 40.246
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1275.598 ; gain = 26.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -402,19 +336,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:38 . Memory (MB): peak = 1290.621 ; gain = 40.246
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1275.598 ; gain = 26.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 1335.828 ; gain = 85.453
+Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 1327.078 ; gain = 77.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 1344.891 ; gain = 94.516
+Finished Technology Mapping : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 1333.336 ; gain = 84.016
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -432,37 +366,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1344.891 ; gain = 94.516
+Finished IO Insertion : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1335.281 ; gain = 85.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1344.891 ; gain = 94.516
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1335.281 ; gain = 85.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1344.891 ; gain = 94.516
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1335.281 ; gain = 85.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1344.891 ; gain = 94.516
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:58 ; elapsed = 00:00:59 . Memory (MB): peak = 1335.281 ; gain = 85.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1344.891 ; gain = 94.516
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 1335.281 ; gain = 85.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1344.891 ; gain = 94.516
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 1335.281 ; gain = 85.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -485,42 +419,43 @@ Report Cell Usage:
 |2     |Program_BRAM_bbox |     1|
 |3     |SysClkWizard_bbox |     1|
 |4     |BUFG              |     1|
-|5     |CARRY4            |   218|
+|5     |CARRY4            |   274|
 |6     |DSP48E1           |     2|
-|7     |LUT1              |    91|
-|8     |LUT2              |   181|
-|9     |LUT3              |   360|
-|10    |LUT4              |   132|
-|11    |LUT5              |   371|
-|12    |LUT6              |   235|
-|13    |MUXF7             |     1|
-|14    |FDRE              |   509|
+|7     |LUT1              |   239|
+|8     |LUT2              |   187|
+|9     |LUT3              |   424|
+|10    |LUT4              |   171|
+|11    |LUT5              |   480|
+|12    |LUT6              |   486|
+|13    |MUXF7             |    16|
+|14    |FDRE              |  1024|
 |15    |FDSE              |    17|
-|16    |IBUF              |    63|
-|17    |OBUF              |    27|
-|18    |OBUFT             |     1|
+|16    |IBUF              |     3|
+|17    |IOBUF             |    59|
+|18    |OBUF              |    29|
 +------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1344.891 ; gain = 94.516
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 1335.281 ; gain = 85.961
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 1344.891 ; gain = 54.270
-Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 1344.891 ; gain = 94.516
+Synthesis finished with 0 errors, 0 critical warnings and 17 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:46 ; elapsed = 00:00:57 . Memory (MB): peak = 1335.281 ; gain = 59.684
+Synthesis Optimization Complete : Time (s): cpu = 00:00:58 ; elapsed = 00:01:00 . Memory (MB): peak = 1335.281 ; gain = 85.961
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1347.613 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 221 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.074 . Memory (MB): peak = 1347.398 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 351 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1351.332 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1351.062 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 59 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 59 instances
 
-Synth Design complete, checksum: 9c5d4f80
+Synth Design complete, checksum: 738b35dc
 INFO: [Common 17-83] Releasing license: Synthesis
-106 Infos, 130 Warnings, 0 Critical Warnings and 0 Errors encountered.
+103 Infos, 68 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 1351.332 ; gain = 100.957
+synth_design: Time (s): cpu = 00:01:05 ; elapsed = 00:01:06 . Memory (MB): peak = 1351.062 ; gain = 101.742
 INFO: [Common 17-1381] The checkpoint 'E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/synth_1/Main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Main_utilization_synth.rpt -pb Main_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Feb 14 20:52:05 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Feb 22 18:19:24 2022...

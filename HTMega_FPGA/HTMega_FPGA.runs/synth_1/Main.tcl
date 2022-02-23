@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -106,7 +107,6 @@ read_vhdl -library xil_defaultlib {
   E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/PM_Controller.vhd
   E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Program_Loader.vhd
   E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller.vhd
-  E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Controller_24MHz.vhd
   E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/RAM_Loader.vhd
   E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Special_REG.vhd
   E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/new/Timer_16bit.vhd

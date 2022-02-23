@@ -8,7 +8,7 @@ use work.Constants.ALL;
 
 entity ALU_16bit is
     Port (
-    	clk_12 : in STD_LOGIC;
+    	clk_6 : in STD_LOGIC;
     	Enable, Start_Execution : in STD_LOGIC;
 		Instr_sel : in STD_LOGIC_VECTOR(4 downto 0);
         X,Y : in STD_LOGIC_VECTOR(15 downto 0);
@@ -76,10 +76,11 @@ with Instr_sel select OUT_1 <=
 	Q_AND when  "01000",
 	Q_OR when   "01001",
 	Q_XOR when  "01010",
-	Q_SUB when  "01011",
-	Q_SUBC when "01100",
+	Q_SUB when  "01011", -- CP
+	Q_SUBC when "01100", -- CPC
+	Q_AND when "01101",  -- BTST
 	
-	IN_1 when   "10000",
+	IN_1 when   "10000", -- IS
 	Q_COM when  "10001",
 	Q_NEG when  "10010",	
 	Q_INC when  "10011",
@@ -90,7 +91,7 @@ with Instr_sel select OUT_1 <=
 	Q_ROL when  "11000",
 	Q_ROR when  "11001",
 	Q_ASR when  "11010",
-	IN_1 when   "11011",
+	IN_1 when   "11011", -- TST
 	X"0000"&'0' when others;
 	
 with Instr_sel select OUT_2 <= 
@@ -117,16 +118,16 @@ res1 <= X when enable = '0' else result;
 
 flags_out <= flags_in when enable = '0' else flags;
 
-process(clk_12) begin
-	if rising_edge(clk_12) then
+process(clk_6) begin
+	if rising_edge(clk_6) then
 		if Enable = '1' and Start_Execution = '1' then
 			IN_1 <= '0'&unsigned(X);
 			IN_2 <= '0'&unsigned(Y);
 		end if;
-		start_buffer <= Enable and Start_Execution;
+    start_buffer <= Enable and Start_Execution;
 	end if;
 	
-	if falling_edge(clk_12) then
+	if falling_edge(clk_6) then
 		fin <= start_buffer;
 	end if;
 end process;
