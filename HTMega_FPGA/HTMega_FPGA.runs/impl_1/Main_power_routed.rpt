@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date             : Tue Feb 22 18:23:08 2022
+| Date             : Wed Feb 23 07:15:41 2022
 | Host             : YMLap running 64-bit major release  (build 9200)
 | Command          : report_power -file Main_power_routed.rpt -pb Main_power_summary_routed.pb -rpx Main_power_routed.rpx
 | Design           : Main
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.184        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.109        |
+| Dynamic (W)              | 0.110        |
 | Device Static (W)        | 0.074        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.1         |
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |       12 |       --- |             --- |
-| Slice Logic    |    <0.001 |     3634 |       --- |             --- |
-|   LUT as Logic |    <0.001 |     1840 |     20800 |            8.85 |
-|   CARRY4       |    <0.001 |      274 |      8150 |            3.36 |
-|   Register     |    <0.001 |     1062 |     41600 |            2.55 |
-|   F7/F8 Muxes  |    <0.001 |       43 |     32600 |            0.13 |
+| Slice Logic    |    <0.001 |     4506 |       --- |             --- |
+|   LUT as Logic |    <0.001 |     2469 |     20800 |           11.87 |
+|   CARRY4       |    <0.001 |      438 |      8150 |            5.37 |
+|   Register     |    <0.001 |     1060 |     41600 |            2.55 |
+|   F7/F8 Muxes  |    <0.001 |       52 |     32600 |            0.16 |
 |   Others       |     0.000 |      183 |       --- |             --- |
-| Signals        |     0.001 |     3210 |       --- |             --- |
-| Block RAM      |     0.006 |     47.5 |        50 |           95.00 |
+| Signals        |     0.002 |     3992 |       --- |             --- |
+| Block RAM      |     0.007 |     47.5 |        50 |           95.00 |
 | MMCM           |     0.093 |        1 |         5 |           20.00 |
 | DSPs           |    <0.001 |        2 |        90 |            2.22 |
 | I/O            |     0.007 |       92 |       106 |           86.79 |
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.020 |       0.009 |      0.011 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.021 |       0.010 |      0.011 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.064 |       0.052 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -153,10 +153,12 @@ Table of Contents
 +----------+-----------+
 | Name     | Power (W) |
 +----------+-----------+
-| Main     |     0.109 |
+| Main     |     0.110 |
+|   ALU    |     0.001 |
 |   Clock  |     0.093 |
 |     inst |     0.093 |
-|   PM     |     0.007 |
+|   GP_Bus |     0.001 |
+|   PM     |     0.008 |
 |     PM   |     0.007 |
 |       U0 |     0.007 |
 +----------+-----------+

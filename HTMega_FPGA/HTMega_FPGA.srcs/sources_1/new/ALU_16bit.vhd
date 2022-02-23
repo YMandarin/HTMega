@@ -22,7 +22,7 @@ end ALU_16bit;
 
 architecture Hierarchical of ALU_16bit is
 signal IN_1, IN_2 : unsigned (16 downto 0);
-signal OUT_1, OUT_2, Q_ADD, Q_ADDC, Q_SUB, Q_SUBC, Q_DIV, 
+signal OUT_1, OUT_2, Q_ADD, Q_ADDC, Q_SUB, Q_SUBC, Q_DIV, Q_REM, Q_REMS,
 	Q_DIVS, Q_INC, Q_DEC, Q_NEG, Q_COM, Q_AND, Q_OR, Q_XOR, Q_SWAP,
 	Q_LSL, Q_LSR, Q_ROL, Q_ROR, Q_ASR : unsigned (16 downto 0);
 signal Q_MUL, Q_MULS : unsigned (32 downto 0);
@@ -39,16 +39,18 @@ begin
 Finished <= fin when Enable = '1' else Start_Execution;
 
 Q_ADD <= IN_1 + IN_2;
-Q_ADDC <= (IN_1 + IN_2) + (flags_in(f_C)&"");
+Q_ADDC<= (IN_1 + IN_2) + (flags_in(f_C)&"");
 Q_SUB <= IN_1 - IN_2;
-Q_SUBC <= (IN_1 - IN_2) - (flags_in(f_C)&"");
-Q_DIV <= '0' & (IN_1(15 downto 0) / IN_2(15 downto 0));
-Q_DIVS <= '0' & unsigned(signed(IN_1(15 downto 0)) / signed(IN_2(15 downto 0)));
+Q_SUBC<= (IN_1 - IN_2) - (flags_in(f_C)&"");
+Q_DIV <= '0' & (IN_1(15 downto 0) / IN_2(15 downto 0)); -- let rtl implement division
+Q_REM <= '0' & (IN_1(15 downto 0) rem IN_2(15 downto 0));
+Q_DIVS<= '0' & unsigned(signed(IN_1(15 downto 0)) / signed(IN_2(15 downto 0)));
+Q_REMS<= '0' & unsigned(signed(IN_1(15 downto 0)) rem signed(IN_2(15 downto 0)));
 Q_MUL <= '0' & (IN_1(15 downto 0) * IN_2(15 downto 0)); -- use hardware dsp modules for multiplication
-Q_MULS <='0' & unsigned(signed(IN_1(15 downto 0)) * signed(IN_2(15 downto 0)));
+Q_MULS<= '0' & unsigned(signed(IN_1(15 downto 0)) * signed(IN_2(15 downto 0)));
 
 Q_AND <= IN_1 AND IN_2;
-Q_OR <= IN_1 OR IN_2;
+Q_OR <=  IN_1 OR IN_2;
 Q_XOR <= IN_1 XOR IN_2;
 
 Q_COM <= NOT IN_1;
@@ -56,12 +58,12 @@ Q_NEG <= X"0000" - IN_1;
 Q_INC <= IN_1 + 1;
 Q_DEC <= IN_1 - 1;
 
-Q_SWAP <= '0' & IN_1(7 downto 0) & IN_1(15 downto 8);
+Q_SWAP<= '0' & IN_1(7 downto 0) & IN_1(15 downto 8);
 Q_LSL <= IN_1(15 downto 0) & '0';
 Q_LSR <= IN_1(0) & '0' & IN_1(15 downto 1);
 Q_ROL <= '0' & IN_1(14 downto 0) & IN_1(15);
 Q_ROR <= '0' & IN_1(0) & IN_1(15 downto 1);
-Q_ASR <= '0' & IN_1(15) & IN_1(15 downto 1); 
+Q_ASR <= IN_1(0) & IN_1(15) & IN_1(15 downto 1); 
 
 
 with Instr_sel select OUT_1 <= 
@@ -97,6 +99,8 @@ with Instr_sel select OUT_1 <=
 with Instr_sel select OUT_2 <= 
 	Q_MUL(32 downto 16) when  "00100",
 	Q_MULS(32 downto 16) when "00110",
+	Q_REM when "00101",
+	Q_REMS when "00111",
 	X"0000"&'0' when others;
 	
 use_out_2 <= '1' when Instr_sel = "00100" or Instr_sel = "00110" else '0';
@@ -104,7 +108,7 @@ use_out_2 <= '1' when Instr_sel = "00100" or Instr_sel = "00110" else '0';
 flags(f_Z) <= OR_REDUCE(std_logic_vector(OUT_1)) NOR OR_REDUCE(std_logic_vector(OUT_2)); -- zero flag
 flags(f_C) <= OUT_2(16) when use_out_2 = '1' else OUT_1(16); -- carry flag
 flags(f_N) <= OUT_2(15) when use_out_2 = '1' else OUT_1(15); -- negative flag
-flags(f_V) <= flags(1); -- overflow flag
+flags(f_V) <= flags(f_C); -- overflow flag
 
 flags(f_T) <= Flags_in (f_T);
 flags(f_I) <= Flags_in(f_I);

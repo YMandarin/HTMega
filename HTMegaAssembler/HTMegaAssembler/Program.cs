@@ -22,13 +22,13 @@ Dictionary<string, OpCode> OPCodes = new Dictionary<string, OpCode>()
     { "POP",  new OpCode{ byteCode=0b00110010, param=Param.reg      }},
     { "LPM",  new OpCode{ byteCode=0b00110100, param=Param.reg_pm   }},
     { "ILPM", new OpCode{ byteCode=0b00110110, param=Param.reg      }},
-    { "STM",  new OpCode{ byteCode=0b00111000, param=Param.reg_pm   }},
-    { "ISTM", new OpCode{ byteCode=0b00111010, param=Param.reg      }},
-    { "ISTMI",new OpCode{ byteCode=0b00111100, param=Param.imdt     }},
+    { "SPM",  new OpCode{ byteCode=0b00111000, param=Param.reg_pm   }},
+    { "ISPM", new OpCode{ byteCode=0b00111010, param=Param.reg      }},
+    { "ISPMI",new OpCode{ byteCode=0b00111100, param=Param.imdt     }},
 
     // branch
     { "JMP",  new OpCode{ byteCode=0b01000000, param=Param.pm }},
-    { "IJMP", new OpCode{ byteCode=0b01000010, param=Param.pm }},
+    { "IJMP", new OpCode{ byteCode=0b01000010, param=Param.none }},
     { "JHI",  new OpCode{ byteCode=0b01000100, param=Param.pm }},
     { "JSLO", new OpCode{ byteCode=0b01000110, param=Param.pm }},
     { "JGE",  new OpCode{ byteCode=0b01001000, param=Param.pm }},
@@ -42,7 +42,7 @@ Dictionary<string, OpCode> OPCodes = new Dictionary<string, OpCode>()
     { "JPL",  new OpCode{ byteCode=0b01101010, param=Param.pm }},
 
     { "RJMP",  new OpCode{ byteCode=0b01000001, param=Param.pm }},
-    { "RIJMP", new OpCode{ byteCode=0b01000011, param=Param.pm }},
+    { "RIJMP", new OpCode{ byteCode=0b01000011, param=Param.none }},
     { "RJHI",  new OpCode{ byteCode=0b01000101, param=Param.pm }},
     { "RJSLO", new OpCode{ byteCode=0b01000111, param=Param.pm }},
     { "RJGE",  new OpCode{ byteCode=0b01001001, param=Param.pm }},
@@ -122,7 +122,7 @@ Dictionary<string, OpCode> OPCodes = new Dictionary<string, OpCode>()
     { "XORI", new OpCode{ byteCode=0b10010101, param=Param.reg_imdt }},
     { "CPI",  new OpCode{ byteCode=0b10010111, param=Param.reg_imdt }},
     { "CPCI", new OpCode{ byteCode=0b10011001, param=Param.reg_imdt }},
-    { "BTSTI",new OpCode{ byteCode=0b10011011, param=Param.reg_reg }},
+    { "BTSTI",new OpCode{ byteCode=0b10011011, param=Param.reg_imdt }},
 
     // single arithmetics
     { "IS",  new OpCode{ byteCode=0b10100000, param=Param.reg }},
