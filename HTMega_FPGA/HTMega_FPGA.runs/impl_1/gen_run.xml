@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1645596722">
-  <File Type="OPT-HWDEF" Name="Main.hwdef"/>
-  <File Type="ROUTE-BUS-SKEW" Name="Main_bus_skew_routed.rpt"/>
-  <File Type="PA-DCP" Name="Main.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1645947720">
   <File Type="ROUTE-PWR" Name="Main_power_routed.rpt"/>
   <File Type="PA-TCL" Name="Main.tcl"/>
   <File Type="BITSTR-MMI" Name="Main.mmi"/>
@@ -13,6 +10,7 @@
   <File Type="OPT-TIMING" Name="Main_timing_summary_opted.rpt"/>
   <File Type="OPT-DCP" Name="Main_opt.dcp"/>
   <File Type="OPT-DRC" Name="Main_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Main.hwdef"/>
   <File Type="PWROPT-DCP" Name="Main_pwropt.dcp"/>
   <File Type="PWROPT-DRC" Name="Main_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="Main_timing_summary_pwropted.rpt"/>
@@ -50,6 +48,7 @@
   <File Type="ROUTE-TIMING-RPX" Name="Main_timing_summary_routed.rpx"/>
   <File Type="ROUTE-SIMILARITY" Name="Main_incremental_reuse_routed.rpt"/>
   <File Type="ROUTE-CLK" Name="Main_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Main_bus_skew_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="Main_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="Main_bus_skew_routed.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="Main_postroute_physopt.dcp"/>

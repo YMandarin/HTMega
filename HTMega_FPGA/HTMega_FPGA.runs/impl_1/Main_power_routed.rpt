@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date             : Wed Feb 23 07:15:41 2022
+| Date             : Sun Feb 27 08:47:21 2022
 | Host             : YMLap running 64-bit major release  (build 9200)
 | Command          : report_power -file Main_power_routed.rpt -pb Main_power_summary_routed.pb -rpx Main_power_routed.rpx
 | Design           : Main
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.002 |       12 |       --- |             --- |
-| Slice Logic    |    <0.001 |     4506 |       --- |             --- |
-|   LUT as Logic |    <0.001 |     2469 |     20800 |           11.87 |
+| Slice Logic    |     0.001 |     4519 |       --- |             --- |
+|   LUT as Logic |    <0.001 |     2470 |     20800 |           11.88 |
 |   CARRY4       |    <0.001 |      438 |      8150 |            5.37 |
-|   Register     |    <0.001 |     1060 |     41600 |            2.55 |
-|   F7/F8 Muxes  |    <0.001 |       52 |     32600 |            0.16 |
+|   Register     |    <0.001 |     1058 |     41600 |            2.54 |
+|   F7/F8 Muxes  |    <0.001 |       60 |     32600 |            0.18 |
 |   Others       |     0.000 |      183 |       --- |             --- |
-| Signals        |     0.002 |     3992 |       --- |             --- |
-| Block RAM      |     0.007 |     47.5 |        50 |           95.00 |
+| Signals        |     0.002 |     3984 |       --- |             --- |
+| Block RAM      |     0.006 |     47.5 |        50 |           95.00 |
 | MMCM           |     0.093 |        1 |         5 |           20.00 |
 | DSPs           |    <0.001 |        2 |        90 |            2.22 |
 | I/O            |     0.007 |       92 |       106 |           86.79 |
@@ -158,7 +158,7 @@ Table of Contents
 |   Clock  |     0.093 |
 |     inst |     0.093 |
 |   GP_Bus |     0.001 |
-|   PM     |     0.008 |
+|   PM     |     0.007 |
 |     PM   |     0.007 |
 |       U0 |     0.007 |
 +----------+-----------+

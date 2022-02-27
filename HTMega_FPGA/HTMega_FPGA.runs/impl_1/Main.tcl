@@ -123,13 +123,35 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 2
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/impl_1/Main.dcp
+  set_param xicom.use_bs_reader 1
+OPTRACE "create in-memory project" START { }
+  create_project -in_memory -part xc7a35tcpg236-1
+  set_property board_part digilentinc.com:cmod_a7-35t:part0:1.1 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
+OPTRACE "create in-memory project" END { }
+OPTRACE "set parameters" START { }
   set_property webtalk.parent_dir E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/wt [current_project]
   set_property parent.project_path E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.xpr [current_project]
   set_property ip_output_repo E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+OPTRACE "set parameters" END { }
+OPTRACE "add files" START { }
+  add_files -quiet E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.runs/synth_1/Main.dcp
+  read_ip -quiet E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/Program_BRAM/Program_BRAM.xci
+  read_ip -quiet E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/SysClkWizard/SysClkWizard.xci
+  read_ip -quiet E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/sources_1/ip/GPREG_IP/GPREG_IP.xci
+OPTRACE "read constraints: implementation" START { }
+  read_xdc E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/constrs_1/new/boot_mode_test.xdc
+  read_xdc E:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.srcs/constrs_1/new/main.xdc
+OPTRACE "read constraints: implementation" END { }
+OPTRACE "add files" END { }
+OPTRACE "link_design" START { }
+  link_design -top Main -part xc7a35tcpg236-1 
+OPTRACE "link_design" END { }
+OPTRACE "gray box cells" START { }
+OPTRACE "gray box cells" END { }
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }
 OPTRACE "init_design_write_hwdef" START { }
@@ -279,4 +301,35 @@ if {$rc} {
 
 OPTRACE "route_design misc" END { }
 OPTRACE "Phase: Route Design" END { }
+OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
+OPTRACE "write_bitstream setup" START { }
+start_step write_bitstream
+set ACTIVE_STEP write_bitstream
+set rc [catch {
+  create_msg_db write_bitstream.pb
+OPTRACE "read constraints: write_bitstream" START { }
+OPTRACE "read constraints: write_bitstream" END { }
+  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  catch { write_mem_info -force -no_partial_mmi Main.mmi }
+OPTRACE "write_bitstream setup" END { }
+OPTRACE "write_bitstream" START { }
+  write_bitstream -force Main.bit -bin_file
+OPTRACE "write_bitstream" END { }
+OPTRACE "write_bitstream misc" START { }
+OPTRACE "read constraints: write_bitstream_post" START { }
+OPTRACE "read constraints: write_bitstream_post" END { }
+  catch {write_debug_probes -quiet -force Main}
+  catch {file copy -force Main.ltx debug_nets.ltx}
+  close_msg_db -file write_bitstream.pb
+} RESULT]
+if {$rc} {
+  step_failed write_bitstream
+  return -code error $RESULT
+} else {
+  end_step write_bitstream
+  unset ACTIVE_STEP 
+}
+
+OPTRACE "write_bitstream misc" END { }
+OPTRACE "Phase: Write Bitstream" END { }
 OPTRACE "impl_1" END { }

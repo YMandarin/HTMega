@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Wed Feb 23 07:14:11 2022
+| Date         : Sun Feb 27 08:45:48 2022
 | Host         : YMLap running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Main_control_sets_placed.rpt
 | Design       : Main
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             183 |           85 |
+| No           | No                    | No                     |             183 |           97 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              24 |            9 |
-| Yes          | No                    | No                     |             669 |          284 |
+| No           | Yes                   | No                     |              24 |           10 |
+| Yes          | No                    | No                     |             669 |          285 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             178 |           68 |
+| Yes          | Yes                   | No                     |             178 |           67 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -74,72 +74,72 @@ Table of Contents
 |                 Clock Signal                |                   Enable Signal                   |                Set/Reset Signal               | Slice Load Count | Bel Load Count | Bels / Slice |
 +---------------------------------------------+---------------------------------------------------+-----------------------------------------------+------------------+----------------+--------------+
 |  Clock/inst/CLK_24                          |                                                   |                                               |                1 |              1 |         1.00 |
-|  Clock/inst/CLK_6                           |                                                   | Boot_Controller/p_0_in                        |                1 |              4 |         4.00 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[7]_1     | GP_Bus/Bus_Controller/Slave_Addr_out_reg[4]_4 |                2 |              4 |         2.00 |
-| ~Clock/inst/CLK_6                           | BootLoaderI/Transmitter/counter0                  |                                               |                3 |              4 |         1.33 |
-| ~Clock/inst/CLK_6                           | BootLoaderI/Transmitter/FIFO[3]_i_2_n_0           | BootLoaderI/Transmitter/FIFO[3]_i_1__0_n_0    |                2 |              4 |         2.00 |
-| ~Clock/inst/CLK_6                           |                                                   | GP_Bus/Bus_Controller/sel_reg[3]_0            |                1 |              4 |         4.00 |
-|  UART/clk                                   | GP_Bus/UART/Receiver/is_receiving                 |                                               |                1 |              4 |         4.00 |
 |  UART/clk                                   | GP_Bus/UART/Transmitter/counter0                  | GP_Bus/UART/Transmitter/counter[3]_i_1__2_n_0 |                2 |              4 |         2.00 |
-|  BootLoaderI/Receiver/counter[3]_i_2__1_n_0 |                                                   |                                               |                2 |              4 |         2.00 |
-|  BootLoaderI/Receiver/counter[3]_i_2__1_n_0 | BootLoaderI/Receiver/receiving_reg_n_0            |                                               |                2 |              4 |         2.00 |
-|  Clock/inst/CLK_6                           | Boot_Controller/E[0]                              |                                               |                5 |              5 |         1.00 |
-|  UART/clk                                   | GP_Bus/UART/Transmitter/FIFO[6]_i_1_n_0           |                                               |                1 |              7 |         7.00 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[0]_2[0]  |                                               |                3 |              8 |         2.67 |
-| ~Clock/inst/CLK_12                          | Writer/Slave_Addr_out0                            |                                               |                3 |              8 |         2.67 |
-|  BootLoaderI/Receiver/counter[3]_i_2__1_n_0 | BootLoaderI/Receiver/data[7]_i_1__0_n_0           | BootLoaderI/Receiver/finished_receiving       |                3 |              8 |         2.67 |
-|  UART/clk                                   | GP_Bus/UART/Receiver/data[7]_i_2_n_0              | GP_Bus/UART/Receiver/wrong_parity0            |                2 |              8 |         4.00 |
-| ~Clock/inst/CLK_12                          |                                                   |                                               |                3 |              8 |         2.67 |
-|  Clock/inst/CLK_6                           | BootLoaderI/Receiver/PM_Data_out0[0]              |                                               |                5 |              8 |         1.60 |
-|  Clock/inst/CLK_6                           | BootLoaderI/Receiver/PM_Data_out0[1]              |                                               |                5 |              8 |         1.60 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/sel_reg[2]_0[0]             |                                               |                3 |              8 |         2.67 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Write_enable_reg_2[0] |                                               |                3 |              8 |         2.67 |
-|  UART/clk                                   | GP_Bus/UART/Receiver/FIFO                         |                                               |                1 |              8 |         8.00 |
+|  UART/clk                                   | GP_Bus/UART/Receiver/is_receiving                 |                                               |                1 |              4 |         4.00 |
+|  BootLoaderI/Receiver/counter[3]_i_2__1_n_0 |                                                   |                                               |                3 |              4 |         1.33 |
+| ~Clock/inst/CLK_6                           | BootLoaderI/Transmitter/FIFO[3]_i_2_n_0           | BootLoaderI/Transmitter/FIFO[3]_i_1__0_n_0    |                1 |              4 |         4.00 |
+|  Clock/inst/CLK_6                           |                                                   | Boot_Controller/p_0_in                        |                2 |              4 |         2.00 |
+| ~Clock/inst/CLK_6                           | BootLoaderI/Transmitter/counter0                  |                                               |                2 |              4 |         2.00 |
+| ~Clock/inst/CLK_6                           |                                                   | GP_Bus/Bus_Controller/sel_reg[3]_0            |                1 |              4 |         4.00 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[7]_1     | GP_Bus/Bus_Controller/Slave_Addr_out_reg[4]_4 |                2 |              4 |         2.00 |
+|  BootLoaderI/Receiver/counter[3]_i_2__1_n_0 | BootLoaderI/Receiver/receiving_reg_n_0            |                                               |                1 |              4 |         4.00 |
+|  Clock/inst/CLK_6                           | Boot_Controller/E[0]                              |                                               |                3 |              5 |         1.67 |
+|  UART/clk                                   | GP_Bus/UART/Transmitter/FIFO[6]_i_1_n_0           |                                               |                2 |              7 |         3.50 |
+|  Clock/inst/CLK_6                           | BootLoaderI/Receiver/PM_Data_out0[0]              |                                               |                7 |              8 |         1.14 |
+|  UART/clk                                   | GP_Bus/UART/Receiver/FIFO                         |                                               |                2 |              8 |         4.00 |
+|  UART/clk                                   | GP_Bus/UART/Receiver/data[7]_i_2_n_0              | GP_Bus/UART/Receiver/wrong_parity0            |                3 |              8 |         2.67 |
+| ~Clock/inst/CLK_12                          |                                                   |                                               |                5 |              8 |         1.60 |
+|  BootLoaderI/Receiver/counter[3]_i_2__1_n_0 | BootLoaderI/Receiver/data[7]_i_1__0_n_0           | BootLoaderI/Receiver/finished_receiving       |                2 |              8 |         4.00 |
 |  BootLoaderI/Receiver/counter[3]_i_2__1_n_0 | BootLoaderI/Receiver/FIFO                         |                                               |                2 |              8 |         4.00 |
-|  Clock/inst/CLK_6                           | Boot_Controller/Finished_reg[0]                   | Boot_Controller/SR[0]                         |                4 |              9 |         2.25 |
-|  UART/clk                                   |                                                   |                                               |                5 |              9 |         1.80 |
+| ~Clock/inst/CLK_12                          | Writer/Slave_Addr_out0                            |                                               |                5 |              8 |         1.60 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/sel_reg[2]_0[0]             |                                               |                2 |              8 |         4.00 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Write_enable_reg_2[0] |                                               |                6 |              8 |         1.33 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[0]_2[0]  |                                               |                3 |              8 |         2.67 |
+|  Clock/inst/CLK_6                           | BootLoaderI/Receiver/PM_Data_out0[1]              |                                               |                4 |              8 |         2.00 |
+|  UART/clk                                   |                                                   |                                               |                7 |              9 |         1.29 |
+|  Clock/inst/CLK_6                           | Boot_Controller/Finished_reg[0]                   | Boot_Controller/SR[0]                         |                3 |              9 |         3.00 |
 |  Clock/inst/CLK_6                           | GP_Bus/UART/prescaler_value[0]_i_2_n_0            | GP_Bus/UART/prescaler_value                   |                3 |             12 |         4.00 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[7]_1     |                                               |                6 |             12 |         2.00 |
-| ~Clock/inst/CLK_24                          |                                                   |                                               |                6 |             12 |         2.00 |
-|  Clock/inst/CLK_6                           | GP_Bus/Timer/Timer_A_Config_reg_n_0_[0]           | GP_Bus/Timer/Timer_A/pre_value[0]_i_1_n_0     |                4 |             14 |         3.50 |
+| ~Clock/inst/CLK_24                          |                                                   |                                               |                5 |             12 |         2.40 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[7]_1     |                                               |                5 |             12 |         2.40 |
 |  Clock/inst/CLK_6                           | GP_Bus/Timer/p_0_in[0]                            | GP_Bus/Timer/Timer_B/pre_value[0]_i_1__0_n_0  |                4 |             14 |         3.50 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[1]_1[0]  |                                               |                9 |             16 |         1.78 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[1]_2[0]  |                                               |                9 |             16 |         1.78 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[0]_6[0]  |                                               |                6 |             16 |         2.67 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[0]_8[0]  |                                               |                7 |             16 |         2.29 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[2]_0[0]  |                                               |               12 |             16 |         1.33 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[3]_1[0]  |                                               |                7 |             16 |         2.29 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[3]_2[0]  |                                               |                6 |             16 |         2.67 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[0]_9[0]  |                                               |                6 |             16 |         2.67 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[0]_7[0]  |                                               |                6 |             16 |         2.67 |
+|  Clock/inst/CLK_6                           | GP_Bus/Timer/Timer_A_Config_reg_n_0_[0]           | GP_Bus/Timer/Timer_A/pre_value[0]_i_1_n_0     |                4 |             14 |         3.50 |
+| ~Clock/inst/CLK_12                          | PM_Loader/E[0]                                    |                                               |                8 |             16 |         2.00 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[3]_0     |                                               |                8 |             16 |         2.00 |
+| ~Clock/inst/CLK_6                           | Decoder/SP_dec_reg_0                              |                                               |                4 |             16 |         4.00 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/sel_reg[4]_1[0]             |                                               |                7 |             16 |         2.29 |
+|  Clock/inst/CLK_6                           |                                                   | Boot_Controller/SR[0]                         |                7 |             16 |         2.29 |
+| ~Clock/inst/CLK_6                           | RAM/read_buffer                                   |                                               |                7 |             16 |         2.29 |
+|  Clock/inst/CLK_6                           | Decoder/data_cache0                               | Loader/Bus_Loader_inst/data_cache[15]_i_1_n_0 |                9 |             16 |         1.78 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[1]_0[0]  |                                               |                8 |             16 |         2.00 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/E[0]                        |                                               |                4 |             16 |         4.00 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[0]_5[0]  |                                               |                6 |             16 |         2.67 |
 | ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[0]_4[0]  |                                               |                6 |             16 |         2.67 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[0]_8[0]  |                                               |                6 |             16 |         2.67 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[1]_2[0]  |                                               |                8 |             16 |         2.00 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[0]_7[0]  |                                               |                8 |             16 |         2.00 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[3]_2[0]  |                                               |                5 |             16 |         3.20 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[0]_9[0]  |                                               |                8 |             16 |         2.00 |
 | ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[2]_2[0]  |                                               |                5 |             16 |         3.20 |
 | ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[4]_1[0]  |                                               |                6 |             16 |         2.67 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/sel_reg[4]_1[0]             |                                               |                8 |             16 |         2.00 |
-|  Clock/inst/CLK_6                           |                                                   | Boot_Controller/SR[0]                         |                7 |             16 |         2.29 |
-|  Clock/inst/CLK_6                           | Decoder/data_cache0                               | Loader/Bus_Loader_inst/data_cache[15]_i_1_n_0 |                9 |             16 |         1.78 |
-| ~Clock/inst/CLK_6                           | RAM/read_buffer                                   |                                               |                5 |             16 |         3.20 |
-| ~Clock/inst/CLK_6                           | Decoder/SP_dec_reg_0                              |                                               |                4 |             16 |         4.00 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[3]_0     |                                               |                8 |             16 |         2.00 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/E[0]                        |                                               |                4 |             16 |         4.00 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[1]_1[0]  |                                               |                9 |             16 |         1.78 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[0]_6[0]  |                                               |                5 |             16 |         3.20 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[2]_0[0]  |                                               |               13 |             16 |         1.23 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[3]_1[0]  |                                               |                7 |             16 |         2.29 |
 | ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[0]_3[0]  |                                               |                8 |             16 |         2.00 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[0]_5[0]  |                                               |                7 |             16 |         2.29 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Slave_Addr_out_reg[1]_0[0]  |                                               |                8 |             16 |         2.00 |
-| ~Clock/inst/CLK_12                          | PM_Loader/E[0]                                    |                                               |                5 |             16 |         3.20 |
-|  Clock/inst/CLK_6                           | Decoder/Bus_load_reg_0[0]                         |                                               |                4 |             17 |         4.25 |
+| ~Clock/inst/CLK_12                          | Clock/inst/CLK_6                                  | Writer/PM_write_buffer_reg_0                  |                8 |             17 |         2.12 |
 | ~Clock/inst/CLK_12                          | Writer/Slave_Addr_out0                            | Loader/Bus_Loader_inst/Bus_enable_reg_0       |               11 |             17 |         1.55 |
 |  Clock/inst/CLK_6                           | BootLoaderI/Receiver/PM_Data_out0[0]              | BootLoaderI/Receiver/finished_reg_0           |                5 |             17 |         3.40 |
 |  Clock/inst/CLK_6                           | GP_Bus/Timer/Timer_B/value0                       | GP_Bus/Timer/Timer_B/value[0]_i_1__0_n_0      |                5 |             17 |         3.40 |
+|  Clock/inst/CLK_6                           | Decoder/Bus_load_reg_0[0]                         |                                               |                5 |             17 |         3.40 |
 |  Clock/inst/CLK_6                           | GP_Bus/Timer/Timer_A/value0                       | GP_Bus/Timer/Timer_A/value[0]_i_1_n_0         |                5 |             17 |         3.40 |
-| ~Clock/inst/CLK_12                          | Clock/inst/CLK_6                                  | Writer/PM_write_buffer_reg_0                  |                7 |             17 |         2.43 |
-| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Q[0]                        |                                               |                7 |             24 |         3.43 |
 | ~Clock/inst/CLK_6                           | Boot_Controller/button_hold_reg_n_0               |                                               |                6 |             24 |         4.00 |
-|  Clock/inst/CLK_6                           | Boot_Controller/Finished_reg[0]                   |                                               |               10 |             28 |         2.80 |
-|  Clock/inst/CLK_6                           | Decoder/ALU_enable_reg_0[0]                       |                                               |               17 |             32 |         1.88 |
+| ~Clock/inst/CLK_6                           | GP_Bus/Bus_Controller/Q[0]                        |                                               |                5 |             24 |         4.80 |
+|  Clock/inst/CLK_6                           | Boot_Controller/Finished_reg[0]                   |                                               |               14 |             28 |         2.00 |
+|  Clock/inst/CLK_6                           | Decoder/finished_reg[0]                           |                                               |               16 |             32 |         2.00 |
 |  Clock/inst/CLK_6                           | GP_Bus/Timer/Timer_Micros/data[0]_i_1_n_0         |                                               |                8 |             32 |         4.00 |
-| ~Clock/inst/CLK_6                           |                                                   |                                               |               28 |             66 |         2.36 |
-| ~Clock/inst/CLK_12                          | Clock/inst/CLK_6                                  |                                               |               47 |             76 |         1.62 |
-|  Clock/inst/CLK_6                           |                                                   |                                               |               40 |             83 |         2.08 |
+| ~Clock/inst/CLK_6                           |                                                   |                                               |               31 |             66 |         2.13 |
+| ~Clock/inst/CLK_12                          | Clock/inst/CLK_6                                  |                                               |               40 |             76 |         1.90 |
+|  Clock/inst/CLK_6                           |                                                   |                                               |               45 |             83 |         1.84 |
 +---------------------------------------------+---------------------------------------------------+-----------------------------------------------+------------------+----------------+--------------+
 
 
