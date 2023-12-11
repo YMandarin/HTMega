@@ -55,11 +55,9 @@
 --  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 --   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 ------------------------------------------------------------------------------
+-- ___CLK_6___6.00000______0.000______50.0______751.587____693.818
 -- __CLK_12__12.00000______0.000______50.0______673.233____693.818
 -- __CLK_24__24.00000______0.000______50.0______600.395____693.818
--- __CLK_48__48.00000______0.000______50.0______520.694____693.818
--- __CLK_96__96.00000______0.000______50.0______478.350____693.818
--- ___CLK_6___6.00000______0.000______50.0______751.587____693.818
 --
 ------------------------------------------------------------------------------
 -- Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -73,11 +71,9 @@ component SysClkWizard
 port
  (-- Clock in ports
   -- Clock out ports
+  CLK_6          : out    std_logic;
   CLK_12          : out    std_logic;
   CLK_24          : out    std_logic;
-  CLK_48          : out    std_logic;
-  CLK_96          : out    std_logic;
-  CLK_6          : out    std_logic;
   -- Status and control signals
   reset             : in     std_logic;
   locked            : out    std_logic;
@@ -92,11 +88,9 @@ end component;
 your_instance_name : SysClkWizard
    port map ( 
   -- Clock out ports  
+   CLK_6 => CLK_6,
    CLK_12 => CLK_12,
    CLK_24 => CLK_24,
-   CLK_48 => CLK_48,
-   CLK_96 => CLK_96,
-   CLK_6 => CLK_6,
   -- Status and control signals                
    reset => reset,
    locked => locked,

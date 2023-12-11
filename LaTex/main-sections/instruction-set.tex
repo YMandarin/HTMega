@@ -1,0 +1,259 @@
+\newpage
+\addtocontents{toc}{\protect\newpage}
+\section{Instruction Set} \label{section:instruction-set}
+\subsection{Nomenclature}
+\begin{doublespace}
+    \textbf{Registers}\\
+\begin{tabular}{p{10mm}p{50mm}}
+    PC & Program Counter \\
+    SP & Stack Pointer \\
+    B & Secondary ALU Output \\
+    Z & Indirect Adress Register \\
+\end{tabular}\\~\\
+\textbf{Flags}\\
+\begin{tabular}{p{10mm}p{50mm}}
+    C & Carry \\
+    Z & Zero \\
+    N & Negative \\
+    V & Two's Complement overflow \\
+    I & Global Interrupt enable \\
+    T & Bit Storage \\
+    R & Ram Address Extension \\
+    P & PM Address Extension \\
+\end{tabular}\\~\\
+\textbf{Operands}\\
+\begin{tabular}{p{10mm}p{50mm}}
+    Rd & (8bit) Write Register Address \\
+    Rr & (8bit) Read Register Address\\
+    K & (16bit) Immediate Value\\
+    X & (16bit) RAM/PM Address \\
+    k & (16bit) Branch Address \\
+\end{tabular}\\~\\
+\textbf{Nomenclature}\\
+\begin{tabular}{p{10mm}p{70mm}}
+    (x) & Access to Memory over Address x \\ 
+    Reg & General purpose Register \\
+    Imdt & Immediate Value \\
+    r & Division remainder \\
+    {[}u{]} & unsigned \\
+    {[}s{]} & signed \\
+\end{tabular}
+\end{doublespace}
+
+\begin{footnotesize}
+\renewcommand{\arraystretch}{1.385}
+\arrayrulecolor{gray!45}
+\rowcolors{2}{gray!25}{white}
+\doublespacing
+\subsection{Arithmetic \& Logic Instructions}
+\begin{tabular}{|p{14.5mm}|p{14mm}|p{47mm}|p{46.5mm}|p{14mm}|p{10mm}|}
+    \rowcolor{gray!50}
+    \hline
+    Mnemonic & Operands  & Operation                                                              & Description                               & Flags & Cycles \\ \hline
+    ADDC     & Rd, Rr    & (Rd) $\leftarrow$ (Rd) + (Rr) + C                                                 & Add with Carry                            & Z, C, N, V     & 6      \\
+    ADD      & Rd, Rr    & (Rd) $\leftarrow$ (Rd) + (Rr)                                                     & Add Registers                            & Z, C, N, V     & 6      \\
+    ADDI     & Rd, K     & (Rd) $\leftarrow$ (Rd) + K                                                        & Add Imdt                                  & Z, C, N, V     & 5      \\
+    ADDCI    & Rd, K     & (Rd) $\leftarrow$ (Rd) + K + C                                                    & Add Imdt and Carry                        & Z, C, N, V     & 5      \\
+    SUB      & Rd, Rr    & (Rd) $\leftarrow$ (Rd) - (Rr)                                                     & Subtract Registers                        & Z, C, N, V     & 6      \\
+    SUBC     & Rd, Rr    & (Rd) $\leftarrow$ (Rd) - (Rr) - C                                                 & Subtract with Carry                       & Z, C, N, V     & 6      \\
+    SUBI     & Rd, K     & (Rd) $\leftarrow$ (Rd) - K                                                        & Subtract Imdt                             & Z, C, N, V     & 5      \\
+    SUBCI    & Rd, K     & (Rd) $\leftarrow$ (Rd) - K - C                                                    & Subtract Imdt with Carry                  & Z, C, N, V     & 5      \\
+    MUL      & Rd, Rr    & B:(Rd) $\leftarrow$ {[}u{]}(Rd) * {[}u{]}(Rd)                                   & Unsigned Multiply Registers               & Z, N           & 6      \\
+    MULS     & Rd, Rr    & B:(Rd) $\leftarrow$ {[}s{]}(Rd) * {[}s{]}(Rd)                                   & Signed Multiply Registers                 & Z, N           & 6      \\
+    MULI     & Rd, K     & B:(Rd) $\leftarrow$ {[}u{]}(Rd) * {[}u{]}K                                      & Unsigned Multiply with Imdt               & Z, N           & 5      \\
+    MULSI    & Rd, K     & B:(Rd) $\leftarrow$ {[}s{]}(Rd) * {[}s{]}K                                    & Signed Multiply with Imdt                 & Z, N           & 5      \\
+    DIV      & Rd, Rr    & (Rd) $\leftarrow$ {[}u{]}(Rd) / {[}u{]}(Rr) \newline B $\leftarrow$ r                        & Unsigned Divide Registers                 & Z, N           & 6      \\
+    DIVS     & Rd, Rr    & (Rd) $\leftarrow$ {[}s{]}(Rd) / {[}s{]}(Rr) \newline B $\leftarrow$ r                        & Signed Divide Registers                   & Z, N           & 6      \\
+    DIVI     & Rd, K     & (Rd) $\leftarrow$ {[}u{]}(Rd) / {[}u{]}K \newline B $\leftarrow$ r                           & Unsigned Divide by Imdt                   & Z, N           & 5      \\
+    DIVSI    & Rd, K     & (Rd) $\leftarrow$ {[}s{]}(Rd) / {[}s{]}K \newline B $\leftarrow$ r                           & Signed Divide by Imdt                     & Z, N           & 5      \\
+    AND      & Rd,Rr     & (Rd) $\leftarrow$ (Rd) $\land$ (Rr)                                                     & Logical AND                               & Z, N           & 6      \\
+    ANDI     & Rd,K      & (Rd) $\leftarrow$ (Rd) $\land$ K                                                        & Logical AND with Imdt                     & Z, N           & 5      \\
+    OR       & Rd,Rr     & (Rd) $\leftarrow$ (Rd) $\lor$ (Rr)                                                     & Logical OR                                & Z, N           & 6      \\
+    ORI      & Rd,K      & (Rd) $\leftarrow$ (Rd) $\lor$ K                                                        & Logical OR with Imdt                      & Z, N           & 5      \\
+    XOR      & Rd,Rr     & (Rd) $\leftarrow$ (Rd) $\oplus$ (Rr)                                                    & Logical XOR                               & Z, N           & 6      \\
+    XORI     & Rd,K      & (Rd) $\leftarrow$ (Rd) $\oplus$ K                                                       & Logical XOR with Imdt                     & Z, N           & 5      \\
+    \hline
+\end{tabular}    
+\newline \\
+\begin{tabular}{|p{14.5mm}|p{14mm}|p{47mm}|p{46.5mm}|p{14mm}|p{10mm}|}
+    \rowcolor{gray!50}
+    \hline
+    Mnemonic & Operands  & Operation                                                              & Description & Flags & Cycles \\ \hline
+    CP       & Rr1, Rr2  & (Rr1) - (Rr2)                                                          & Compare Registers                         & Z, C, N, V     & 5      \\
+    CPC      & Rr1, Rr2  & (Rr1) - (Rr2) - C                                                      & Compare with Carry                        & Z, C, N, V     & 5      \\
+    CPI      & Rr, K     & (Rr) - K                                                               & Compare with Imdt                         & Z, C, N, V     & 4      \\
+    CPCI     & Rr, K     & (Rr) - K - C                                                           & Compare with Imdt and Carry               & Z, C, N, V     & 4      \\
+    BTST     & Rr1, Rr2  & (Rr1) $\land$ (Rr2)                                                          & Test Bit                                  & Z, N           & 5      \\
+    BTSTI    & Rr, K     & (Rr) $\land$  K                                                              & Best Bit with Imdt                        & Z, N           & 4      \\
+    COM      & Rd        & (Rd) $\leftarrow$ 0xFFFF - (Rd)                                                   & One's Complement                          & Z, N           & 5      \\
+    NEG      & Rd        & (Rd) $\leftarrow$ 0x0000 - (Rd)                                                   & Two's Complement                          & Z, N           & 5      \\
+    INC      & Rd        & (Rd) $\leftarrow$ (Rd) + 1                                                        & Increment Register                        & Z, C, N, V     & 5      \\
+    DEC      & Rd        & (Rd) $\leftarrow$ (Rd) - 1                                                        & Decrement Register                        & Z, C, N, V     & 5      \\
+    SWAP     & Rd        & (Rd){[}0-7{]} $\leftarrow$ (Rd){[}8-15{]} \newline (Rd){[}8-15{]} $\leftarrow$ (Rd){[}0-7{]}        & Swap Bytes                         & Z, N           & 5      \\
+    LSL      & Rd        & (Rd) $\leftarrow$ (Rd) \textless{}\textless\:1                                     & Logical shift left                        & Z, C, N, V     & 5      \\
+    LSR      & Rd        & (Rd) $\leftarrow$ (Rd) \textgreater{}\textgreater\:1                               & Logical shift right                       & Z, C, N, V     & 5      \\
+    ROL      & Rd        & (Rd) $\leftarrow$ (Rd) \textless{}\textless\:1 \newline (Rd){[}0{]} $\leftarrow$ (Rd){[}15{]}        & Rotate left                        & Z, N           & 5      \\
+    ROR      & Rd        & (Rd) $\leftarrow$ (Rd) \textgreater{}\textgreater\:1 \newline (Rd){[}15{]} $\leftarrow$ (Rd){[}0{]}  & Rotate right                       & Z, N           & 5      \\
+    ASR      & Rd        & (Rd) $\leftarrow$ (Rd) \textgreater{}\textgreater\:1 \newline (Rd){[}15{]} $\leftarrow$ (Rd){[}15{]} & Arithmetic right shift             & Z, C, N, V     & 5      \\
+    TST      & Rd        & (Rd)                                                                   & Test Register                             & Z, N           & 4      \\
+    \hline
+\end{tabular}\\
+\subsection{Branch/Jump Instructions}
+\begin{tabular}{|p{14.5mm}|p{14mm}|p{47mm}|p{46.5mm}|p{14mm}|p{10mm}|}
+    \rowcolor{gray!50}
+    Mnemonic & Operands  & Operation                                                              & Description & Flags & Cycles \\ \hline
+    JMP      & k         & PC $\leftarrow$ k                                                      & Jump                                      &                & 2      \\
+    RJMP     & k         & PC $\leftarrow$ PC + k + 1                                             & Relative Jump                             &                & 2      \\
+    IJMP     & k         & PC $\leftarrow$ Z                                                      & Indirect Jump                             &                & 2      \\
+    RIJMP    & k         & PC $\leftarrow$ Z                                                      & Relative indirect Jump                    &                & 2      \\
+    \hline
+\end{tabular}
+\newline\\
+\begin{tabular}{|p{14.5mm}|p{14mm}|p{47mm}|p{46.5mm}|p{14mm}|p{10mm}|}
+    \rowcolor{gray!50}
+    \hline
+    Mnemonic & Operands  & Operation                                                              & Description & Flags & Cycles \\ \hline
+    JEQ      & k         & if( Z ): PC $\leftarrow$ k                                             & Jump if equal                             & Z              & 2      \\
+    JNEQ     & k         & if( $\sim$Z ): PC $\leftarrow$ k                                       & Jump if not equal                         & Z              & 2      \\
+    JHI      & k         & if ( $\sim$C $\land$ $\sim$Z ): PC $\leftarrow$ k                            & Jump if higher                            & C, Z           & 2      \\
+    JSHI     & k         & if ( $\sim$C ): PC $\leftarrow$ k                                      & Jump if same or higher                    & C              & 2      \\
+    JSLO     & k         & if ( C $\lor$ Z ): PC $\leftarrow$ k                                        & Jump if same or lower                     & C, Z           & 2      \\
+    JLO      & k         & if ( C  ): PC $\leftarrow$ k                                           & Jump if lower                             & C              & 2      \\
+    JMI      & k         & if ( N ): PC $\leftarrow$ k                                            & Jump if minus                             & N              & 2      \\
+    JPL      & k         & if ( $\sim$N ): PC $\leftarrow$ k                                      & Jump if plus                              & N              & 2      \\
+    JGE      & k         & if ( N $\oplus$ $\sim$V ): PC $\leftarrow$ k                                  & Jump if greater or equal, \newline signed         & N, V           & 2      \\
+    JLT      & k         & if ( N $\oplus$ V ): PC $\leftarrow$ k                                        & Jump if less than, signed                & N, V           & 2      \\
+    RJEQ     & k         & if( Z ): PC $\leftarrow$ PC + k + 1                                    & Relative Jump if equal                    & Z              & 2      \\
+    RJNEQ    & k         & if( $\sim$Z ): PC $\leftarrow$ PC + k + 1                              & Relative Jump if not equal                & Z              & 2      \\
+    RJHI     & k         & if ( $\sim$C $\land$ $\sim$Z ): \newline PC $\leftarrow$ PC + k + 1                   & Relative Jump if higher                   & C, Z           & 2      \\
+    RJSHI    & k         & if ( $\sim$C ): \newline PC $\leftarrow$ PC + k + 1                             & Relative Jump if \newline same or higher           & C              & 2      \\
+    RJSLO    & k         & if ( C $\lor$ Z ): \newline PC $\leftarrow$ PC + k + 1                               & Relative Jump if \newline same or lower            & C, Z           & 2      \\
+    RJLO     & k         & if ( C  ): PC $\leftarrow$ PC + k + 1                                  & Relative Jump if lower                    & C              & 2      \\
+    RJMI     & k         & if ( N ): PC $\leftarrow$ PC + k + 1                                   & Relative Jump if minus                    & N              & 2      \\
+    RJPL     & k         & if ( $\sim$N ): PC $\leftarrow$ PC + k + 1                             & Relative Jump if plus                     & N              & 2      \\
+    RJGE     & k         & if ( N $\oplus$ $\sim$V ): \newline PC $\leftarrow$ PC + k + 1                         & Relative Jump \newline if greater or equal, signed& N, V           & 2      \\
+    RJLT     & k         & if ( N $\oplus$ V ): \newline PC $\leftarrow$ PC + k + 1                               & Relative Jump \newline if less than, signed       & N, V           & 2      \\
+    \hline
+\end{tabular}
+\subsection{Branch by Flag Instructions}
+\begin{tabular}{|p{14.5mm}|p{14mm}|p{47mm}|p{46.5mm}|p{14mm}|p{10mm}|}
+    \rowcolor{gray!50}
+    Mnemonic & Operands  & Operation                                                              & Description & Flags & Cycles \\ \hline
+    JFZS     & k         & if (Z): PC $\leftarrow$ k                                              & Jump if Zero flag set                     & Z              & 2      \\
+    JFCS     & k         & if (C): PC $\leftarrow$ k                                              & Jump if Carry flag set                    & C              & 2      \\
+    JFNS     & k         & if (N): PC $\leftarrow$ k                                              & Jump if Negative flag set                 & N              & 2      \\
+    JFVS     & k         & if (V): PC $\leftarrow$ k                                              & Jump if Overflow flag set                 & V              & 2      \\
+    JFTS     & k         & if (T): PC $\leftarrow$ k                                              & Jump if Bit Storage flag set              & T              & 2      \\
+    JFIS     & k         & if (I): PC $\leftarrow$ k                                              & Jump if Interrupt flag set                & I              & 2      \\
+    JFRS     & k         & if (R): PC $\leftarrow$ k                                              & Jump if Ram Select flag set               & R              & 2      \\
+    JFPS     & k         & if (P): PC $\leftarrow$ k                                              & Jump if PM Select flag set                & P              & 2      \\
+    JFZC     & k         & if ($\sim$Z): PC $\leftarrow$ k                                        & Jump if Zero flag cleared                 & Z              & 2      \\
+    JFCC     & k         & if ($\sim$C): PC $\leftarrow$ k                                        & Jump if Carry flag cleared                & C              & 2      \\
+    JFNC     & k         & if ($\sim$N): PC $\leftarrow$ k                                        & Jump if Negative flag cleared             & N              & 2      \\
+    JFVC     & k         & if ($\sim$V): PC $\leftarrow$ k                                        & Jump if Overflow flag cleared             & V              & 2      \\
+    JFTC     & k         & if ($\sim$T): PC $\leftarrow$ k                                        & Jump if Bit Storage flag cleared          & T              & 2      \\
+    JFIC     & k         & if ($\sim$I): PC $\leftarrow$ k                                        & Jump if Interrupt flag cleared            & I              & 2      \\
+    JFRC     & k         & if ($\sim$R): PC $\leftarrow$ k                                        & Jump if Ram Select flag cleared           & R              & 2      \\
+    JFPC     & k         & if ($\sim$P): PC $\leftarrow$ k                                        & Jump if PM Select flag cleared            & P              & 2      \\
+    RJFZS    & k         & if (Z): PC $\leftarrow$ PC + k + 1                                     & Relative Jump if Zero flag set            & Z              & 2      \\
+    RJFCS    & k         & if (C): PC $\leftarrow$ PC + k + 1                                     & Relative Jump if Carry flag set           & C              & 2      \\
+    RJFNS    & k         & if (N): PC $\leftarrow$ PC + k + 1                                     & Relative Jump if Negative flag set        & N              & 2      \\
+    RJFVS    & k         & if (V): PC $\leftarrow$ PC + k + 1                                     & Relative Jump if Overflow flag set        & V              & 2      \\
+    RJFTS    & k         & if (T): PC $\leftarrow$ PC + k + 1                                     & Relative Jump \newline if Bit Storage flag set     & T              & 2      \\
+    RJFIS    & k         & if (I): PC $\leftarrow$ PC + k + 1                                     & Relative Jump \newline if Interrupt flag set       & I              & 2      \\
+    RJFRS    & k         & if (R): PC $\leftarrow$ PC + k + 1                                     & Relative Jump \newline if Ram Select flag set      & R              & 2      \\
+    \hline
+\end{tabular}
+\newline\\
+\begin{tabular}{|p{14.5mm}|p{14mm}|p{47mm}|p{46.5mm}|p{14mm}|p{10mm}|}
+    \rowcolor{gray!50}
+    \hline
+    Mnemonic & Operands  & Operation                                                              & Description & Flags & Cycles \\ \hline
+    RJFPS    & k         & if (P): PC $\leftarrow$ PC + k + 1                                     & Relative Jump \newline if PM Select flag set       & P              & 2      \\
+    RJFZC    & k         & if ($\sim$Z): PC $\leftarrow$ PC + k + 1                               & Relative Jump if Zero flag cleared        & Z              & 2      \\
+    RJFCC    & k         & if ($\sim$C): PC $\leftarrow$ PC + k + 1                               & Relative Jump \newline if Carry flag cleared       & C              & 2      \\
+    RJFNC    & k         & if ($\sim$N): PC $\leftarrow$ PC + k + 1                               & Relative Jump \newline if Negative flag cleared    & N              & 2      \\
+    RJFVC    & k         & if ($\sim$V): PC $\leftarrow$ PC + k + 1                               & Relative Jump \newline if Overflow flag cleared    & V              & 2      \\
+    RJFTC    & k         & if ($\sim$T): PC $\leftarrow$ PC + k + 1                               & Relative Jump \newline if Bit Storage flag cleared & T              & 2      \\
+    RJFIC    & k         & if ($\sim$I): PC $\leftarrow$ PC + k + 1                               & Relative Jump \newline if Interrupt flag cleared   & I              & 2      \\
+    RJFRC    & k         & if ($\sim$R): PC $\leftarrow$ PC + k + 1                               & Relative Jump \newline if Ram Select flag cleared  & R              & 2      \\
+    RJFPC    & k         & if ($\sim$P): PC $\leftarrow$ PC + k + 1                               & Relative Jump \newline if PM Select flag cleared   & P              & 2      \\
+    MOV      & Rr, Rd    & (Rd) $\leftarrow$ (Rr)                                                 & Move Register                             &                & 4      \\
+    LD       & Rd, X     & (Rd) $\leftarrow$ RAM(X)                                               & Load from RAM                             &                & 4      \\
+    LDI      & Rd, K     & (Rd) $\leftarrow$ K                                                    & Load Imdt                                 &                & 3      \\
+    ILD      & Rd        & (RD) $\leftarrow$ RAM(Z)                                               & Indirect Load from RAM                    &                & 4      \\
+    ST       & Rr, X     & RAM(X) $\leftarrow$ (Rr)                                               & Store on RAM                              &                & 4      \\
+    IST      & Rr        & RAM(Z) $\leftarrow$ (Rr)                                               & Indirect Store on RAM                     &                & 4      \\
+    ISTI     & K         & RAM(Z) $\leftarrow$ K                                                  & Indirect Store Imdt on RAM                &                & 3      \\
+    PUSH     & Rr        & RAM(SP) $\leftarrow$ (Rr) \newline SP $\leftarrow$ SP - 1              & Push to Stack                             &                & 4      \\
+    \hline
+\end{tabular}
+\newline\\
+\begin{tabular}{|p{14.5mm}|p{14mm}|p{47mm}|p{46.5mm}|p{14mm}|p{10mm}|}
+    \rowcolor{gray!50}
+    \hline
+    Mnemonic & Operands  & Operation                                                              & Description & Flags & Cycles \\ \hline
+    PUSHI    & K         & RAM(SP) $\leftarrow$ K \newline SP $\leftarrow$ SP - 1                 & Push Imdt to Stack                        &                & 3      \\
+    POP      & Rd        & (Rd) $\leftarrow$ RAM(SP) \newline SP $\leftarrow$ SP + 1              & Pop from Stack                            &                & 4      \\
+    LPM      & Rd, X     & (Rd) $\leftarrow$ PM(X)                                                & Load from PM                              &                & 4      \\
+    ILPM     & Rd        & (Rd) $\leftarrow$ PM(Z)                                                & Indirect Load from PM                     &                & 4      \\
+    SPM      & Rr, X     & PM(X) $\leftarrow$ (Rr)                                                & Store on PM                               &                & 4      \\
+    ISPM     & Rr        & PM(Z) $\leftarrow$ (Rr)                                                & Indirect Store on PM                      &                & 4      \\
+    ISPMI    & K         & PM(Z) $\leftarrow$ K                                                   & Indirect Store Imdt on PM                 &                & 3      \\
+    \hline
+\end{tabular}\\
+\subsection{Control Instructions}
+\begin{tabular}{|p{14.5mm}|p{14mm}|p{47mm}|p{46.5mm}|p{14mm}|p{10mm}|}
+    \rowcolor{gray!50}
+    \hline
+    Mnemonic & Operands  & Operation                                                              & Description & Flags & Cycles \\ \hline
+    NOP      &           &                                                                        & No Operation                              &                & 2      \\
+    END      &           &                                                                        & End Program, start Boot Mode              &                & 2      \\
+    \hline
+\end{tabular}~\\
+
+\section{Register Symbols} \label{section:register-symbols}
+\begin{tabular}{|p{20mm}|p{15mm}|p{80mm}|}
+    \rowcolor{gray!50}
+    \hline
+    Symbol & Address & Description \\
+    ALU\_B & 0xFB & Alu Secondary Output \\
+    SP & 0xFC & Stack Pointer \\
+    IADDR & 0xFD & Indirect Address Register (Z-Register)\\
+    PC & 0xFE & Program Counter (Readonly) \\
+    FLAGS & 0xFF & Flag Register \\ \hline
+\end{tabular}
+\newpage
+\begin{tabular}{|p{20mm}|p{15mm}|p{80mm}|}
+    \rowcolor{gray!50}
+    \hline
+    Symbol & Address & Description \\
+    PA\_IN & 0xE2 & Port A input \\
+    PA\_OUT & 0xE3 & Port A output \\
+    PA\_CONF & 0xE4 & Port A output enable\\
+    PB\_IN & 0xE5 & Port B input \\
+    PB\_OUT & 0xE6 & Port B output \\
+    PB\_CONF & 0xE7 & Port B output enable\\
+    PC\_IN & 0xE8 & Port C input \\
+    PC\_OUT & 0xE9 & Port C output \\
+    PC\_CONF & 0xEA & Port C output enable\\
+    PD\_IN & 0xEB & Port D input \\
+    PD\_OUT & 0xEC & Port D output \\
+    PD\_CONF & 0xED & Port D output enable\\
+    UART\_CONF & 0xEE & UART config \\
+    UART\_TD & 0xEF & UART Transfer Data \\
+    UART\_RD & 0xF0 & UART Received Data \\
+    TIMA\_VAL & 0xF1 & Timer A Value (resets timer on write) (readonly) \\
+    TIMB\_VAL & 0xF2 & Timer B Value (resets timer on write) (readonly) \\
+    TIMA\_TOP & 0xF3 & Timer A Top Value (resets timer on write) \\
+    TIMB\_TOP & 0xF4 & Timer B Top Value (resets timer on write) \\
+    TIMA\_COMP & 0xF5 & Timer A Comparison Value \\
+    TIMB\_COMP & 0xF6 & Timer B Comparison Value \\
+    TIMA\_CONF & 0xF7 & Timer A Configuration \\
+    TIMB\_CONF & 0xF8 & Timer B Configuration \\
+    MICR\_L & 0xF9 & Micros Counter Lower 16bit \\
+    MICR\_H & 0xFA & Micros Counter Higher 16bit \\
+
+\end{tabular}
+\end{footnotesize}
+

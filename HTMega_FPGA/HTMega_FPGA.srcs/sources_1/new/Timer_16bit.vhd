@@ -28,13 +28,12 @@ constant prescalers : prescaler_type := (6000,1000,600,60,6,3,2,1);
 
 begin
 	value_out <= std_logic_vector(to_unsigned(value, 16));
-	out_comparison <= '1' when is_match else '0';
 	out_port <= port_value when port_enabled and enabled = '1' else 'Z';
 	prescaler_value <= prescalers(to_integer(unsigned(prescaler)))-1;
 	
 	process(clk_6) begin
 	    if clear_buffer = '1' then
-		    is_match <= false;
+		    out_comparison <= '0';
             out_overflow <= '0';
 		end if;
 		if rising_edge(clk_6) and enabled = '1' then
@@ -49,7 +48,9 @@ begin
 					value <= value + 1;
 					if en_comparison = '1' then
                         is_match <= value = (unsigned(compare_value)-1) and is_value_up ;
-        
+                        if value = (unsigned(compare_value)-1) and is_value_up then
+                            out_comparison <= '1';
+                        end if;
                         if en_pwm = '1' then
                             case port_config is
                                 when "01" =>

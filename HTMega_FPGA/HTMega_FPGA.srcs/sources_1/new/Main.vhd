@@ -10,7 +10,7 @@ entity Main is
     	RAM_Addr : out STD_LOGIC_VECTOR(18 downto 0);
     	RAM_Data : inout STD_LOGIC_VECTOR(7 downto 0);
     	RAM_OE, RAM_WE, RAM_CE : out STD_LOGIC;
-    	GPIO : inout STD_LOGIC_VECTOR (43 downto 0);
+    	GPIO : inout STD_LOGIC_VECTOR (45 downto 0);
 		UART_in : in STD_LOGIC;
 		UART_out : out STD_LOGIC;
 		PMOD : inout STD_LOGIC_VECTOR (7 downto 0);
@@ -21,7 +21,7 @@ end Main;
 
 architecture Behavioral of Main is
 
-signal clk_6, clk_12, clk_24, clk_48, clk_96, clk_locked : std_logic := '0';
+signal clk_6, clk_12, clk_24, clk_locked : std_logic := '0';
 signal start_loader, start_ALU, start_writer, start_program_loader, start_decoder : std_logic := '1';
 signal enable_bus_load, enable_ram_load, enable_pm_load, enable_ALU, enable_bus_write, enable_ram_write, enable_pm_write, enable_bus_second : std_logic := '1';
 signal addr_ram, addr_pm, program_counter, immediate : std_logic_vector(15 downto 0) := X"0000";
@@ -56,11 +56,9 @@ signal RgbLED : std_logic_vector(2 downto 0);
 component SysClkWizard is
 	port(
 		clk_in1 : in STD_LOGIC;
+        CLK_6 : out STD_LOGIC;
 		CLK_12 : out STD_LOGIC;
 		CLK_24 : out STD_LOGIC;
-		CLK_48 : out STD_LOGIC;
-		CLK_96 : out STD_LOGIC;
-		CLK_6 : out STD_LOGIC;
 		reset : in STD_LOGIC;
 		locked : out STD_LOGIC
 	);
@@ -180,7 +178,7 @@ component GP_Bus_Master is
 		Master_Data_out : out std_logic_vector(15 downto 0);
 		Master_Bus_read, Master_Bus_write : in std_logic;
 		
-		Pin_GPIO : inout std_logic_vector (43 downto 0);
+		Pin_GPIO : inout std_logic_vector (45 downto 0);
 		Pin_PMOD : inout std_logic_vector (7 downto 0);
 		Pin_UART_out : out std_logic;
 		Pin_UART_in : in std_logic;
@@ -249,8 +247,8 @@ end component;
 begin
 
 	Clock : SysClkWizard port map(
-		clk_in1 => sysclk, CLK_12 => clk_12, CLK_24 => clk_24, 
-		CLK_48 => clk_48, CLK_96 => clk_96, CLK_6 => clk_6,
+		clk_in1 => sysclk, CLK_6 => clk_6,
+		CLK_12 => clk_12, CLK_24 => clk_24, 
 		reset => '0', locked => clk_locked
 	);
 

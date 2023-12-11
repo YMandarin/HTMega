@@ -1,0 +1,93 @@
+\definecolor{backcolor}{rgb}{1,1,1}
+\definecolor{keywordcolor}{rgb}{0.1,0,0.8}
+\definecolor{typecolor}{rgb}{0,0.5,0.1}
+\definecolor{functioncolor}{rgb}{0,0,1}
+\definecolor{stringcolor}{rgb}{0.8,0.1,0}
+\definecolor{mateBlack}{RGB}{0.3,0.3,0.3}
+\definecolor{commentcolor}{rgb}{0.1,0.6,0.2}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{charcolor}{rgb}{0.8,0.3,0}
+\definecolor{light-gray}{gray}{0.95}
+\lstdefinestyle{vhdl}{
+    language=VHDL,
+    basicstyle=\scriptsize,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    xleftmargin=0pt,
+    columns=flexible,
+    backgroundcolor=\color{backcolor},
+    keywordstyle=[1]\color{keywordcolor}\bf,
+    keywordstyle=[2]\color{typecolor},
+    keywordstyle=[3]\color{functioncolor!50}\bf,
+    stringstyle=\color{stringcolor},
+    commentstyle=\color{commentcolor},
+    tabsize=2,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    moredelim=[is][\component]{component\ }{\ is},
+    morekeywords=[1]{
+    library, use ,all,entity,is,port,in,out,end,architecture,of, body,
+    function, variable, begin,and,or,Not,downto,ALL, signal, process, if,
+    else, elsif, case, when, then, range, to, component, type, with, select,
+    others, constant, inout, buffer, map, true, false, array, subtype, wait,
+    wait for, generic
+    },
+    alsoletter={=, <, >},
+    morekeywords=[2]{
+        STD_LOGIC_VECTOR,STD_LOGIC,IEEE,STD_LOGIC_1164, work, local, real,
+        math_real, time, NUMERIC_STD,STD_LOGIC_ARITH,STD_LOGIC_UNSIGNED,
+        std_logic_vector, std_logic, ieee, numeric_std, std_ulogic,
+        std_logic_1164, natural, bit, bit_vector, signed, unsigned,
+        boolean, integer
+    },
+    morekeywords=[3]{rising_edge, falling_edge, resize, to_signed, to_unsigned,or_reduce},
+    morecomment=[l]{--},
+    morecomment=[s][\color{charcolor}]{'}{'},
+    rulecolor=\color{magenta},
+}
+
+\definecolor{bluekeywords}{rgb}{0,0,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.64,0.08,0.08}
+\definecolor{xmlcomments}{rgb}{0.5,0.5,0.5}
+\definecolor{types}{rgb}{0.17,0.57,0.68}
+
+\lstdefinestyle{csharp}{
+language=[Sharp]C,
+captionpos=b,
+keepspaces=true,
+breakatwhitespace=true,
+columns=flexible,
+showtabs=true,
+xleftmargin=0pt,
+tabsize=2,
+breaklines=true,
+showstringspaces=true,
+escapeinside={(*@}{@*)},
+commentstyle=\color{greencomments},
+morekeywords={partial, var, value, get, set},
+keywordstyle=\color{bluekeywords}, 
+stringstyle=\color{redstrings},
+basicstyle=\ttfamily\small,
+}
+
+\lstdefinestyle{hasm}{
+    language={[sharp]C},
+    captionpos=b
+    keepspaces=true
+    breakatwhitespace=true,
+    columns=flexible,
+    showtabs=true,
+    xleftmargin=0pt,
+    tabsize=2,
+    breaklines=true,
+    showstringspaces=true,
+    escapeinside={(*@}{@*)},
+    commentstyle=\color{greencomments},
+    morekeywords={LDI, PUSH, END, JMP, XORI},
+    keywordstyle=\color{bluekeywords}, 
+    stringstyle=\color{redstrings},
+    basicstyle=\ttfamily,
+}

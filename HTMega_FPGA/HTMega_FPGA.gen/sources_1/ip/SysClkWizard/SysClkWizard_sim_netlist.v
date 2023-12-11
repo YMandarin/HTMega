@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-// Date        : Thu Feb 17 10:54:37 2022
+// Date        : Sun Mar  6 07:47:49 2022
 // Host        : YMLap running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               e:/Diplomarbeit/HTMega/HTMega_FPGA/HTMega_FPGA.gen/sources_1/ip/SysClkWizard/SysClkWizard_sim_netlist.v
@@ -14,28 +14,22 @@
 
 (* NotValidForBitStream *)
 module SysClkWizard
-   (CLK_12,
+   (CLK_6,
+    CLK_12,
     CLK_24,
-    CLK_48,
-    CLK_96,
-    CLK_6,
     reset,
     locked,
     clk_in1);
+  output CLK_6;
   output CLK_12;
   output CLK_24;
-  output CLK_48;
-  output CLK_96;
-  output CLK_6;
   input reset;
   output locked;
   input clk_in1;
 
   wire CLK_12;
   wire CLK_24;
-  wire CLK_48;
   wire CLK_6;
-  wire CLK_96;
   (* IBUF_LOW_PWR *) (* RTL_KEEP = "yes" *) wire clk_in1;
   wire locked;
   wire reset;
@@ -43,28 +37,22 @@ module SysClkWizard
   SysClkWizard_clk_wiz inst
        (.CLK_12(CLK_12),
         .CLK_24(CLK_24),
-        .CLK_48(CLK_48),
         .CLK_6(CLK_6),
-        .CLK_96(CLK_96),
         .clk_in1(clk_in1),
         .locked(locked),
         .reset(reset));
 endmodule
 
 module SysClkWizard_clk_wiz
-   (CLK_12,
+   (CLK_6,
+    CLK_12,
     CLK_24,
-    CLK_48,
-    CLK_96,
-    CLK_6,
     reset,
     locked,
     clk_in1);
+  output CLK_6;
   output CLK_12;
   output CLK_24;
-  output CLK_48;
-  output CLK_96;
-  output CLK_6;
   input reset;
   output locked;
   input clk_in1;
@@ -73,12 +61,8 @@ module SysClkWizard_clk_wiz
   wire CLK_12_SysClkWizard;
   wire CLK_24;
   wire CLK_24_SysClkWizard;
-  wire CLK_48;
-  wire CLK_48_SysClkWizard;
   wire CLK_6;
   wire CLK_6_SysClkWizard;
-  wire CLK_96;
-  wire CLK_96_SysClkWizard;
   wire clk_in1;
   wire clk_in1_SysClkWizard;
   wire clkfbout_SysClkWizard;
@@ -91,7 +75,9 @@ module SysClkWizard_clk_wiz
   wire NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED;
+  wire NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED;
+  wire NLW_mmcm_adv_inst_CLKOUT4_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT6_UNCONNECTED;
   wire NLW_mmcm_adv_inst_DRDY_UNCONNECTED;
@@ -113,24 +99,16 @@ module SysClkWizard_clk_wiz
         .O(clk_in1_SysClkWizard));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout1_buf
+       (.I(CLK_6_SysClkWizard),
+        .O(CLK_6));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout2_buf
        (.I(CLK_12_SysClkWizard),
         .O(CLK_12));
   (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFG clkout2_buf
+  BUFG clkout3_buf
        (.I(CLK_24_SysClkWizard),
         .O(CLK_24));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFG clkout3_buf
-       (.I(CLK_48_SysClkWizard),
-        .O(CLK_48));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFG clkout4_buf
-       (.I(CLK_96_SysClkWizard),
-        .O(CLK_96));
-  (* BOX_TYPE = "PRIMITIVE" *) 
-  BUFG clkout5_buf
-       (.I(CLK_6_SysClkWizard),
-        .O(CLK_6));
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
@@ -139,24 +117,24 @@ module SysClkWizard_clk_wiz
     .CLKFBOUT_USE_FINE_PS("FALSE"),
     .CLKIN1_PERIOD(83.333000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(64.000000),
+    .CLKOUT0_DIVIDE_F(128.000000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(32),
+    .CLKOUT1_DIVIDE(64),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
-    .CLKOUT2_DIVIDE(16),
+    .CLKOUT2_DIVIDE(32),
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),
-    .CLKOUT3_DIVIDE(8),
+    .CLKOUT3_DIVIDE(1),
     .CLKOUT3_DUTY_CYCLE(0.500000),
     .CLKOUT3_PHASE(0.000000),
     .CLKOUT3_USE_FINE_PS("FALSE"),
     .CLKOUT4_CASCADE("FALSE"),
-    .CLKOUT4_DIVIDE(128),
+    .CLKOUT4_DIVIDE(1),
     .CLKOUT4_DUTY_CYCLE(0.500000),
     .CLKOUT4_PHASE(0.000000),
     .CLKOUT4_USE_FINE_PS("FALSE"),
@@ -190,15 +168,15 @@ module SysClkWizard_clk_wiz
         .CLKIN2(1'b0),
         .CLKINSEL(1'b1),
         .CLKINSTOPPED(NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED),
-        .CLKOUT0(CLK_12_SysClkWizard),
+        .CLKOUT0(CLK_6_SysClkWizard),
         .CLKOUT0B(NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED),
-        .CLKOUT1(CLK_24_SysClkWizard),
+        .CLKOUT1(CLK_12_SysClkWizard),
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
-        .CLKOUT2(CLK_48_SysClkWizard),
+        .CLKOUT2(CLK_24_SysClkWizard),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),
-        .CLKOUT3(CLK_96_SysClkWizard),
+        .CLKOUT3(NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED),
         .CLKOUT3B(NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED),
-        .CLKOUT4(CLK_6_SysClkWizard),
+        .CLKOUT4(NLW_mmcm_adv_inst_CLKOUT4_UNCONNECTED),
         .CLKOUT5(NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED),
         .CLKOUT6(NLW_mmcm_adv_inst_CLKOUT6_UNCONNECTED),
         .DADDR({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}),

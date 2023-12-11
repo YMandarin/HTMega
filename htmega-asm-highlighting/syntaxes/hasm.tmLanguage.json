@@ -19,7 +19,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control",
-				"match": "(?i)\\b(nop|end|mov|ld|ldi|ild|st|ist|isti|push|pushi|pop|lpm|ilpm|stm|istm|istmi|jmp|ijmp|jhi|jslo|jge|jlt|jeq|jneq|jshi|jlo|jmi|jpl|rjmp|rijmp|rjhi|rjslo|rjge|rjlt|rjeq|rjneq|rjshi|rjlo|rjmi|rjpl|jfzs|jfcs|jfns|jfvs|jfts|jfis|jfrs|jfps|jfzc|jfcc|jfnc|jfvc|jftc|jfic|jfrc|jfpc|rjfzs|rjfzs|rjfcs|rjfns|rjfvs|rjfts|rjfis|rjfrs|rjfps|rjfzc|rjfcc|rjfnc|rjfvc|rjftc|rjfic|rjfrc|rjfpc|add|addc|sub|subc|mul|div|muls|divs|and|or|xor|cp|cpc|addi|addci|subi|subci|muli|divi|mulsi|divsi|andi|ori|xori|cpi|cpci|is|com|neg|inc|dec|swap|lsl|lsr|rol|ror|asr|tst)\\b"
+				"match": "(?i)\\b(nop|end|mov|ld|ldi|ild|st|ist|isti|push|pushi|pop|lpm|ilpm|stm|istm|istmi|jmp|ijmp|jhi|jslo|jge|jlt|jeq|jneq|jshi|jlo|jmi|jpl|rjmp|rijmp|rjhi|rjslo|rjge|rjlt|rjeq|rjneq|rjshi|rjlo|rjmi|rjpl|jfzs|jfcs|jfns|jfvs|jfts|jfis|jfrs|jfps|jfzc|jfcc|jfnc|jfvc|jftc|jfic|jfrc|jfpc|rjfzs|rjfzs|rjfcs|rjfns|rjfvs|rjfts|rjfis|rjfrs|rjfps|rjfzc|rjfcc|rjfnc|rjfvc|rjftc|rjfic|rjfrc|rjfpc|add|addc|sub|subc|mul|div|muls|divs|and|or|xor|cp|cpc|btst|addi|addci|subi|subci|muli|divi|mulsi|divsi|andi|ori|xori|cpi|cpci|btsti|is|com|neg|inc|dec|swap|lsl|lsr|rol|ror|asr|tst)\\b"
 			}]
 		},
 		"numeric": {

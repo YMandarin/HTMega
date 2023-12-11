@@ -284,7 +284,7 @@ void main()
                     break;
 
                 case Param.reg:
-                    testParameters(parameters, 2, i);
+                    testParameters(parameters, 1, i);
                     bytecode.Add(parseRegAddr(parameters[0], i));
                     bytecode.Add(0x00);
                     bytecode.Add(0x00);

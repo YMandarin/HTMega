@@ -19,7 +19,7 @@ entity GPIO_Interface is
 		bus_data_out : out STD_LOGIC_VECTOR (15 downto 0) := X"0000";
 		bus_enable, write_enable : in STD_LOGIC;
 		port_Timer_A, port_Timer_B: in STD_LOGIC;
-		Pin_GPIO: inout STD_LOGIC_VECTOR (43 downto 0);
+		Pin_GPIO: inout STD_LOGIC_VECTOR (45 downto 0);
 		Pin_LED: out STD_LOGIC_VECTOR(3 downto 0);
 		Pin_button: in STD_LOGIC;
 		Pin_PMOD : inout STD_LOGIC_VECTOR(7 downto 0)
@@ -38,13 +38,15 @@ begin
 		Pin_GPIO(i) <= IO_out_A(i) when IO_config_A(i) = '1' else 'Z';
 	end generate IO_A;
 	
-	Pin_GPIO(16) <= IO_out_B(0) when IO_config_B(0) = '1' else 'Z';
-	IO_B: for i in 1 to 15 generate
+	IO_B: for i in 0 to 15 generate
 		Pin_GPIO(i+16) <= IO_out_B(i) when IO_config_B(i) = '1' else 'Z';
 	end generate IO_B;
-	IO_C: for i in 0 to 11 generate
+	IO_C: for i in 0 to 12 generate
 		Pin_GPIO(i+32) <= IO_out_C(i) when IO_config_C(i) = '1' else 'Z';
 	end generate IO_C;
+    Pin_GPIO(45) <= IO_out_B(13) when IO_config_B(13) = '1' else port_Timer_B;
+
+	
 	IO_PMOD : for i in 0 to 7 generate 
 		Pin_PMOD(i) <= IO_out_Board(i) when IO_config_Board(i) = '1' else 'Z';
 	end generate IO_PMOD;

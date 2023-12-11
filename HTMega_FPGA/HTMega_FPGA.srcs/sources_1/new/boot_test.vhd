@@ -14,7 +14,7 @@ entity boot_test is
 end boot_test;
 
 architecture Behavioral of boot_test is
-signal clk_6, clk_12, clk_24, clk_48, clk_96, clk_locked : std_logic := '0';
+signal clk_6, clk_12, clk_24, clk_locked : std_logic := '0';
 signal pm_boot_write, boot_is_sending : std_logic := '0';
 signal boot_mode : std_logic := '1';
 signal boot_loader_finished, program_reset, program_stopped : std_logic := '0';
@@ -24,11 +24,9 @@ signal pm_boot_data_in : std_logic_vector(15 downto 0) := (others => '0');
 component SysClkWizard is
 	port(
 		clk_in1 : in STD_LOGIC;
+        CLK_6 : out STD_LOGIC;
 		CLK_12 : out STD_LOGIC;
 		CLK_24 : out STD_LOGIC;
-		CLK_48 : out STD_LOGIC;
-		CLK_96 : out STD_LOGIC;
-		CLK_6 : out STD_LOGIC;
 		reset : in STD_LOGIC;
 		locked : out STD_LOGIC
 	);
@@ -70,8 +68,8 @@ component Boot_Mode_Controller is
 end component;
 begin
     Clock : SysClkWizard port map(
-		clk_in1 => sysclk, CLK_12 => clk_12, CLK_24 => clk_24, 
-		CLK_48 => clk_48, CLK_96 => clk_96, CLK_6 => clk_6,
+		clk_in1 => sysclk,  CLK_6 => clk_6,
+		CLK_12 => clk_12, CLK_24 => clk_24,
 		reset => '0', locked => clk_locked
 	);
 	

@@ -10,7 +10,7 @@ entity GP_Bus_Master is
 		Master_Data_out : out std_logic_vector(15 downto 0);
 		Master_Bus_read, Master_Bus_write : in std_logic;
 		
-		Pin_GPIO : inout std_logic_vector (43 downto 0);
+		Pin_GPIO : inout std_logic_vector (45 downto 0);
 		Pin_PMOD : inout std_logic_vector (7 downto 0);
 		Pin_UART_out : out std_logic;
 		Pin_UART_in : in std_logic;
@@ -63,7 +63,7 @@ component GPIO_Interface is
 		bus_data_out : out STD_LOGIC_VECTOR (15 downto 0);
 		bus_enable, write_enable : in STD_LOGIC;
 		port_Timer_A, port_Timer_B: in STD_LOGIC;
-		Pin_GPIO: inout STD_LOGIC_VECTOR (43 downto 0);
+		Pin_GPIO: inout STD_LOGIC_VECTOR (45 downto 0);
 		Pin_LED: out STD_LOGIC_VECTOR(3 downto 0);
 		Pin_button: in STD_LOGIC;
 		Pin_PMOD : inout STD_LOGIC_VECTOR(7 downto 0)

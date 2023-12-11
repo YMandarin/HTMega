@@ -1,0 +1,72 @@
+\contentsline {section}{Declaration of Honour}{2}{section*.1}%
+\contentsline {section}{Abstract}{3}{section*.2}%
+\contentsline {subsection}{Features}{3}{section*.3}%
+\contentsline {paragraph}{Core Device Functionalities}{3}{section*.4}%
+\contentsline {paragraph}{Additional Device Features}{3}{section*.5}%
+\contentsline {paragraph}{Software}{3}{section*.6}%
+\contentsline {subsection}{Use Cases}{3}{section*.7}%
+\contentsline {section}{Contents}{5}{section*.8}%
+\contentsline {section}{\numberline {1}Design Decisions}{6}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Preamble}{6}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Architecture}{6}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Instruction set}{6}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Board}{6}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Limitations and Drawbacks}{7}{subsection.1.5}%
+\contentsline {section}{\numberline {2}Manual \& Datasheet}{8}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Board}{8}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}MCU Status}{8}{subsubsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.2}FPGA Block Diagram}{9}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Memory}{10}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}General Purpose Bus}{10}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Program Memory}{10}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}SRAM}{10}{subsubsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.4}Execution Cycle}{11}{subsection.2.4}%
+\contentsline {paragraph}{Example}{11}{section*.11}%
+\contentsline {subsection}{\numberline {2.5}Programming the Microcontroller}{11}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}Assembly}{11}{subsubsection.2.5.1}%
+\contentsline {paragraph}{Example Code}{12}{section*.13}%
+\contentsline {paragraph}{Assembling}{12}{section*.14}%
+\contentsline {subsubsection}{\numberline {2.5.2}Programmer}{12}{subsubsection.2.5.2}%
+\contentsline {paragraph}{Programming Protocol}{12}{section*.15}%
+\contentsline {subsection}{\numberline {2.6}Pinout}{13}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}GPIO}{13}{subsection.2.7}%
+\contentsline {paragraph}{Block Diagram}{14}{section*.17}%
+\contentsline {paragraph}{Example Code}{14}{section*.19}%
+\contentsline {subsection}{\numberline {2.8}USB - UART}{14}{subsection.2.8}%
+\contentsline {subsubsection}{\numberline {2.8.1}Protocol}{14}{subsubsection.2.8.1}%
+\contentsline {subsubsection}{\numberline {2.8.2}Configuration}{15}{subsubsection.2.8.2}%
+\contentsline {subsubsection}{\numberline {2.8.3}Sending}{15}{subsubsection.2.8.3}%
+\contentsline {subsubsection}{\numberline {2.8.4}Receiving}{15}{subsubsection.2.8.4}%
+\contentsline {paragraph}{UART\_RD Register Description}{15}{section*.21}%
+\contentsline {subsection}{\numberline {2.9}Timers}{16}{subsection.2.9}%
+\contentsline {subsubsection}{\numberline {2.9.1}Universal Timer/Counter}{16}{subsubsection.2.9.1}%
+\contentsline {subsubsection}{\numberline {2.9.2}Configuration}{17}{subsubsection.2.9.2}%
+\contentsline {paragraph}{Prescaler}{17}{section*.23}%
+\contentsline {paragraph}{Waveform Generation}{17}{section*.24}%
+\newpage 
+\contentsline {section}{\numberline {3}Instruction Set}{18}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Nomenclature}{18}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Arithmetic \& Logic Instructions}{19}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Branch/Jump Instructions}{20}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Branch by Flag Instructions}{22}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Control Instructions}{24}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Register Symbols}{24}{section.4}%
+\contentsline {section}{\numberline {5}Software}{26}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Assembler}{26}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Running the Assembler}{26}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Errors}{26}{subsubsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.3}Flow Chart}{27}{subsubsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.2}Programmer}{27}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Running the Programmer}{27}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Errors}{27}{subsubsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.3}Code Highlighter}{28}{subsection.5.3}%
+\contentsline {paragraph}{Example - Regular Expression to select literals:}{28}{section*.26}%
+\contentsline {section}{\numberline {6}Getting Started}{28}{section.6}%
+\contentsline {paragraph}{Requirements}{28}{section*.27}%
+\contentsline {paragraph}{Generating Bitstream}{28}{section*.28}%
+\contentsline {paragraph}{Connecting to the Target}{28}{section*.29}%
+\contentsline {paragraph}{Volatile Programming}{29}{section*.30}%
+\contentsline {paragraph}{Nonvolatile Programming}{29}{section*.32}%
+\contentsline {section}{List of Figures}{30}{section*.34}%
+\contentsline {section}{References}{31}{section*.35}%
+\contentsline {section}{Time Tracking}{32}{section*.36}%
