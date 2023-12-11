@@ -1,6 +1,6 @@
 # Diploma Thesis: HTMega
 
-The Goal of this Thesis is to develop and create a custom and functional microcontroller on an FPGA.
+The goal of this thesis is to develop and create a custom and functional 16 bit microcontroller on an FPGA.
 
 You can find the thesis paper in [Thesis.pdf](Thesis.pdf).
 
